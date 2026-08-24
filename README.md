@@ -1,83 +1,55 @@
-# 🌿 Circuito Terê Verde
+# 🌿 Terê Verde Online - MVP Mobile
 
-![Capa do Site](./capa-site.png)
-
-**Integrante:** Leandro Bragança da Silva  
+Aplicação web mobile desenvolvida para o **Circuito Terê Verde**, facilitando o acesso a informações sobre parques, trilhas, biodiversidade e educação ambiental em Teresópolis - RJ.
 
 ---
 
-## 🏞️ Sobre o Projeto
-O **Circuito Terê Verde** é um projeto de ecoturismo desenvolvido em **HTML, CSS e JavaScript**, com o objetivo de divulgar e valorizar as belezas naturais de **Teresópolis (RJ)**.  
-O site apresenta informações sobre trilhas, parques e biodiversidade da região, incentivando práticas de turismo sustentável e a conscientização ambiental.
+## 📌 Contexto e Situação-Problema
+Teresópolis é um polo de ecoturismo e montanhismo cercado por três unidades de conservação:
+1. **Parque Nacional da Serra dos Órgãos (PARNASO)**
+2. **Parque Estadual dos Três Picos**
+3. **Parque Natural Municipal Montanhas de Teresópolis**
+
+A plataforma **Terê Verde Online** surge para solucionar a fragmentação de informações sobre esses espaços, fornecendo um guia interativo e promovendo a conscientização e a preservação ambiental entre moradores e visitantes.
 
 ---
 
-## 💡 Funcionalidades
-- Página inicial com informações gerais sobre o projeto.  
-- Página de **Trilhas** com descrições e níveis de dificuldade.  
-- Página de **Biodiversidade & Eventos** com destaques e atividades locais.  
-- Sistema de **Login Administrativo (demo)** com redirecionamento para o Painel Admin.  
-- Layout **responsivo**, com paleta em verde e azul bebê.
+## 🎯 Escopo do MVP
 
-## 📐 Prototipação
+### 📋 Requisitos Funcionais (RF)
+- **RF-01: Guia dos Parques:** Exibir informações e horários das unidades de conservação.
+- **RF-02: Catálogo de Trilhas e Cachoeiras:** Listar atrativos detalhando nível de dificuldade, extensão e tempo estimado.
+- **RF-03: Módulo de Educação Ambiental:** Apresentar guia visual de espécies da fauna e flora locais.
+- **RF-04: Calendário de Eventos:** Divulgar eventos ecológicos e mutirões comunitários.
+- **RF-05: Manual de Conduta Consciente:** Exibir regras de segurança, preservação e telefones de emergência.
+- **RF-06: Filtro de Busca:** Permitir filtragem de atrações por categoria e nível de dificuldade.
 
-### Tela Inicial
-![Tela Inicial](./images/inicio.PNG)
+### ⚙️ Requisitos Não-Funcionais (RNF)
+- **RNF-01: Layout Mobile-First:** Design otimizado para uso em smartphones.
+- **RNF-02: Usabilidade:** Interface intuitiva com ícones claros e alto contraste.
+- **RNF-03: Desempenho:** Carregamento rápido em redes móveis (3G/4G/5G).
+- **RNF-04: Acesso Aberto:** Dispensa necessidade de download via loja de aplicativos (Web App).
+- **RNF-05: Código Limpo:** Componentização e boas práticas de desenvolvimento web.
 
-### Tela Trilhas
-![Tela Trilhas](./images/trilha.PNG)
+---
 
-### Tela Biodiversidade & Eventos
-![Tela Biodiversidade](./images/biodversidade.PNG)
+## 🚫 Fora do Escopo (O que o MVP NÃO faz)
+- ❌ Venda ou agendamento de ingressos para os parques.
+- ❌ Navegação GPS offline ou rastreamento em tempo real nas trilhas.
+- ❌ Sistema de cadastro, login ou área restrita de usuário.
+- ❌ Contratação de guias de turismo ou serviços terceirizados.
+- ❌ Integração em tempo real com APIs de emergência do governo.
 
-## Prototipação (3 telas)
+---
 
-As telas do protótipo do MVP foram **criadas no Canva**                                                                                 
+## 🛠️ Tecnologias Utilizadas
+- HTML5 / CSS3 / JavaScript (ou React / Vite)
+- Git & GitHub (Versionamento)
 
-<img width="1121" height="261" alt="image" src="https://github.com/user-attachments/assets/7bfdb93d-c82e-4552-b403-87f9e3e59faf" />
+---
 
-## 🗂️ Estrutura do Projeto
-```
-tereverde-online-mvp-frontend/
-/index.html
-/trilhas.html
-/biodiversidade.html
-/css/style.css
-/js/main.js
-/images/... (se houver)
-```
+## 🚀 Como Executar o Projeto
 
-## 🚀 Como Executar
-1. Baixe ou clone este repositório:
+1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/Leandrosilva20/tereverde-online-mvp-frontend.git
-   ```
-
-2. Abra o arquivo `index.html` em qualquer navegador.  
-
-3. Para testar o **login administrativo**:
-   - **Email:** `admin@tere.com`  
-   - **Senha:** `senha123`  
-
-   > Se o login for correto, aparecerá o alerta “Acesso permitido!” e o usuário será redirecionado para o painel administrativo.
-
----
-
-## 🖼️ Visual
-O site utiliza um design moderno, com:
-- Fundo verde e detalhes em azul bebê;  
-- Layout limpo e minimalista;  
-- Ícones e divisões para facilitar a navegação.  
-
----
-
-## 👨‍💻 Tecnologias Utilizadas
-- **HTML5**  
-- **CSS3** (Flexbox e responsividade)  
-- **JavaScript** (DOM e validação de login)  
-
-[---](https://leandrosilva20.github.io/tereverde-online-mvp-frontend/)
-
-## 📄 Licença
-Projeto acadêmico desenvolvido por **Leandro Bragança da Silva**.  
-Uso livre para fins educacionais.
+   git clone [https://github.com/Leandrosilva20/tereverde-online-mvp-frontend.git](https://github.com/Leandrosilva20/tereverde-online-mvp-frontend.git)
