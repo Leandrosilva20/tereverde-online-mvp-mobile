@@ -1,63 +1,68 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Painel Admin - Circuito Terê Verde</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Painel Admin - Circuito Terê Verde</title>
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="js/main.js"></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-      
-        <div>
-          <h1>Painel Administrativo</h1>
-          <p class="subtitle">Área administrativa (demo)</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Sair</a>
-      </nav>
+<body class="admin-page">
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <h1>Painel Administrativo</h1>
+      <p class="subtitle">Gestão de disponibilidade — trilhas e eventos</p>
     </div>
-  </header>
+    <nav class="nav">
+      <a href="index.html" class="nav-link" data-acao="sair">Sair</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="container">
-    <h2>Trilhas cadastradas</h2>
-    <table id="trilhasTable" class="admin-table">
-      <thead><tr><th>Nome</th><th>Dificuldade</th><th>Distância (km)</th><th>Ações</th></tr></thead>
-      <tbody></tbody>
-    </table>
+<main class="container">
+  <p class="aviso-seguranca">
+    ⚠️ Esta área é protegida apenas por uma simulação de login no navegador (sem backend), feita para fins de demonstração
+    acadêmica. Para um ambiente real, seria necessário autenticação em servidor (ex.: API com senhas com hash + tokens de sessão).
+  </p>
 
-    <h2>Eventos cadastrados</h2>
-    <table id="eventsTable" class="admin-table">
-      <thead><tr><th>Título</th><th>Data</th><th>Local</th><th>Ações</th></tr></thead>
-      <tbody></tbody>
-    </table>
+  <h2>Trilhas cadastradas</h2>
+  <table id="trilhasTable" class="admin-table">
+    <thead>
+      <tr><th>Nome</th><th>Dificuldade</th><th>Distância</th><th>Disponibilidade</th><th>Horário de funcionamento</th><th>Ações</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="admin-actions">
+    <button id="addTrailBtn" class="btn primary">Adicionar Trilha</button>
+  </div>
 
-    <div class="admin-actions">
-      <button id="addTrailBtn" class="btn primary">Adicionar Trilha</button>
-      <button id="addEventBtn" class="btn primary">Adicionar Evento</button>
-    </div>
-  </main>
+  <h2>Eventos cadastrados</h2>
+  <table id="eventsTable" class="admin-table">
+    <thead>
+      <tr><th>Título</th><th>Data</th><th>Local</th><th>Disponibilidade</th><th>Horário</th><th>Ações</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div class="admin-actions">
+    <button id="addEventBtn" class="btn primary">Adicionar Evento</button>
+  </div>
+</main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div>© 2025 Circuito Terê Verde — Leandro Bragança da Silva</div>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container">© 2026 Circuito Terê Verde — Projeto acadêmico</div>
+</footer>
 
-  <div id="editorModal" class="modal" aria-hidden="true">
-    <div class="modal-panel">
-      <button id="closeEditor" class="modal-close">&times;</button>
-      <h3 id="editorTitle">Editar</h3>
-      <div id="editorBody"></div>
-      <div class="modal-actions">
-        <button id="saveEditor" class="btn primary">Salvar</button>
-        <button id="cancelEditor" class="btn ghost">Cancelar</button>
-      </div>
+<div id="editorModal" class="modal" aria-hidden="true">
+  <div class="modal-panel">
+    <button id="closeEditor" class="modal-close">&times;</button>
+    <h3 id="editorTitle">Editar</h3>
+    <div id="editorBody"></div>
+    <div class="modal-actions">
+      <button id="saveEditor" class="btn primary">Salvar</button>
+      <button id="cancelEditor" class="btn ghost">Cancelar</button>
     </div>
   </div>
+</div>
 </body>
 </html>
