@@ -1,244 +1,69 @@
-# 🌿 Circuito Terê Verde
+# 🌿 Circuito Terê Verde — versão corrigida
 
-## 📱 Sobre o Projeto
+MVP web (HTML/CSS/JS) para divulgar trilhas, biodiversidade e eventos das
+unidades de conservação de Teresópolis (PARNASO, Parque Estadual dos Três
+Picos e Parque Natural Municipal Montanhas de Teresópolis).
 
-O **Circuito Terê Verde** é um projeto desenvolvido com o objetivo de valorizar o turismo, a natureza e a biodiversidade de **Teresópolis – RJ**, proporcionando uma experiência digital para facilitar o acesso a informações sobre trilhas, áreas naturais e biodiversidade da região.
+## O que foi corrigido em relação à versão anterior
 
-O projeto foi desenvolvido como um **MVP (Minimum Viable Product)**, apresentando uma estrutura funcional e intuitiva para demonstrar a proposta da aplicação.
+Com base na verificação contra as exigências da Situação-Problema #1:
 
----
+1. **Segurança de dados (era o principal problema).**
+   O modal de login antes mostrava a senha de demonstração em texto visível
+   na própria tela (`admin@tere.com` / `senha123`). Isso foi removido. O
+   login continua sendo apenas uma simulação em JavaScript no navegador —
+   **isso é uma limitação conhecida de qualquer MVP sem backend**, e agora
+   está sinalizada de forma explícita tanto na tela de login quanto dentro
+   do painel administrativo, em vez de parecer resolvida. Para um sistema
+   real, seria necessário um backend com autenticação (ex.: hash de senha,
+   tokens de sessão, HTTPS).
 
-## 🎯 Objetivo
+2. **Gestão de disponibilidade.**
+   Antes, o painel só tinha nome/dificuldade/distância (trilhas) e
+   título/data/local (eventos) — sem status. Agora cada trilha e evento tem
+   um campo de **Disponibilidade** (Disponível / Em manutenção / Fechada /
+   Lotado / Cancelado) e um campo de **Horário de funcionamento**, editáveis
+   pelo administrador e exibidos automaticamente nas páginas públicas
+   (`trilhas.html` e `biodiversidade.html`).
 
-O objetivo do Circuito Terê Verde é reunir, em uma única plataforma, informações relacionadas às riquezas naturais de Teresópolis, incentivando:
+3. **Duplicidade admin.html / painel.html.**
+   Os dois arquivos faziam a mesma coisa. Foram unificados em um único
+   `admin.html`, evitando confusão sobre qual é a área administrativa
+   oficial.
 
-* 🌳 Turismo sustentável;
-* 🥾 Exploração de trilhas;
-* 🐦 Conhecimento sobre a biodiversidade;
-* ♻️ Conscientização ambiental;
-* 📍 Valorização dos espaços naturais;
-* 🌿 Preservação do meio ambiente.
+4. **Login para administradores.**
+   Mantido como pedido no desafio (botão "Login Admin"), mas agora o
+   `admin.html` verifica a sessão e redireciona para a página inicial se
+   não houver login ativo — antes, a página administrativa era acessível
+   diretamente pela URL, sem qualquer checagem.
 
----
+## Estrutura
 
-## 💡 Proposta do MVP
-
-A proposta do MVP é apresentar uma solução digital simples e acessível para conectar visitantes e moradores às atrações naturais da região.
-
-A plataforma permite visualizar diferentes áreas do projeto, incluindo informações sobre **trilhas, biodiversidade e recursos naturais**, utilizando uma interface desenvolvida para facilitar a navegação.
-
----
-
-## 🖥️ Estrutura do Projeto
-
-O projeto está organizado da seguinte maneira:
-
-```text
-tereverde-online-mvp-mobile/
-│
-├── css/
-│   └── arquivos de estilos
-│
-├── images/
-│   └── imagens utilizadas no projeto
-│
-├── js/
-│   └── arquivos JavaScript
-│
-├── admin.html
-├── biodiversidade.html
-├── floresta.svg
+```
+tereverde/
+├── css/style.css
+├── js/main.js          # login (demo), CRUD, renderização das listas
+├── images/hero.svg
 ├── index.html
-├── painel.html
 ├── trilhas.html
-│
+├── biodiversidade.html
+├── admin.html
 └── README.md
 ```
 
----
+## Como usar
 
-## 📄 Principais Páginas
+Basta abrir `index.html` no navegador — não há dependências. Os dados de
+trilhas/eventos ficam salvos no `localStorage` do navegador (dá pra editar
+pelo painel e recarregar a página que os dados continuam lá).
 
-### 🏠 Página Inicial
+Para testar o login: qualquer email válido + senha com 4+ caracteres entra
+no painel (é só uma simulação, como explicado acima).
 
-A página inicial apresenta o projeto e direciona o usuário para as principais áreas da plataforma.
+## Próximos passos sugeridos (fora do escopo deste MVP)
 
-**Arquivo:**
-
-```text
-index.html
-```
-
-### 🥾 Trilhas
-
-Área destinada à apresentação das trilhas e informações relacionadas às opções de exploração da natureza.
-
-**Arquivo:**
-
-```text
-trilhas.html
-```
-
-### 🐦 Biodiversidade
-
-Página voltada para informações sobre a fauna, flora e biodiversidade da região.
-
-**Arquivo:**
-
-```text
-biodiversidade.html
-```
-
-### 📊 Painel
-
-Área destinada à apresentação das informações e recursos administrativos do projeto.
-
-**Arquivo:**
-
-```text
-painel.html
-```
-
-### ⚙️ Administração
-
-Página destinada aos recursos administrativos da aplicação.
-
-**Arquivo:**
-
-```text
-admin.html
-```
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-O projeto foi desenvolvido utilizando tecnologias web fundamentais:
-
-* HTML5
-* CSS3
-* JavaScript
-* Git
-* GitHub
-* Canva
-
----
-
-## 🎨 Prototipação e Design
-
-A etapa de prototipação e criação visual foi realizada utilizando o **Canva**, permitindo estruturar a identidade visual e a apresentação das telas do projeto.
-
-Os protótipos serviram como referência para o desenvolvimento da interface da aplicação.
-
----
-
-## 📱 Aplicação Mobile
-
-O projeto foi estruturado com foco em uma experiência adequada para dispositivos móveis, buscando facilitar o acesso às informações durante a utilização em ambientes externos e durante visitas aos espaços naturais.
-
-A proposta considera aspectos como:
-
-* Interface simples;
-* Navegação intuitiva;
-* Organização das informações;
-* Facilidade de acesso pelo celular;
-* Apresentação visual relacionada à natureza e ao turismo.
-
----
-
-## 🌱 Sustentabilidade
-
-O Circuito Terê Verde busca contribuir para a valorização do patrimônio natural de Teresópolis, incentivando práticas relacionadas ao turismo consciente e à preservação ambiental.
-
-A plataforma tem como propósito aproximar as pessoas da natureza por meio da tecnologia, estimulando o conhecimento e a valorização dos espaços naturais.
-
----
-
-## 📍 Localização
-
-**Teresópolis – Rio de Janeiro – Brasil**
-
-A cidade é conhecida por suas áreas de Mata Atlântica, trilhas, montanhas e grande diversidade natural, tornando-se um ambiente adequado para a proposta do projeto.
-
----
-
-## 🚀 Como Executar o Projeto
-
-Para utilizar o projeto localmente, primeiro faça o clone do repositório:
-
-```bash
-git clone https://github.com/Leandrosilva20/tereverde-online-mvp-mobile.git
-```
-
-Depois, entre na pasta do projeto:
-
-```bash
-cd tereverde-online-mvp-mobile
-```
-
-Como o projeto utiliza HTML, CSS e JavaScript, não é necessário instalar dependências adicionais para visualizar a estrutura básica.
-
-Abra o arquivo:
-
-```text
-index.html
-```
-
-diretamente no navegador.
-
----
-
-## 🔗 Repositório
-
-O código-fonte do projeto está disponível no GitHub:
-
-**Circuito Terê Verde – MVP Mobile**
-
-https://github.com/Leandrosilva20/tereverde-online-mvp-mobile
-
----
-
-## 📸 Protótipos
-
-Os protótipos desenvolvidos no Canva podem ser adicionados posteriormente ao projeto para documentar visualmente as telas planejadas.
-
-Sugestão de organização:
-
-```text
-prototipos/
-├── tela-inicial.png
-├── tela-trilhas.png
-└── tela-biodiversidade.png
-```
-
-> Caso essa pasta ainda não exista no GitHub, ela pode ser criada posteriormente para armazenar as imagens dos protótipos.
-
----
-
-## 📚 Finalidade Acadêmica
-
-Este projeto foi desenvolvido como parte de uma proposta de desenvolvimento de uma solução digital relacionada ao turismo, meio ambiente e valorização da biodiversidade de Teresópolis.
-
-O MVP demonstra a aplicação prática de conceitos de:
-
-* Desenvolvimento web;
-* Prototipação;
-* Experiência do usuário;
-* Design de interfaces;
-* Organização de projetos;
-* Versionamento de código;
-* Sustentabilidade e tecnologia.
-
----
-
-## 👥 Projeto
-
-**Circuito Terê Verde**
-
-🌿 Tecnologia, turismo e sustentabilidade conectados para valorizar Teresópolis.
-
----
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para fins acadêmicos e de demonstração.
+- Backend real (Node/Express, Firebase, etc.) com autenticação segura.
+- Banco de dados em vez de `localStorage`, para os dados persistirem entre
+  dispositivos/navegadores.
+- Testes de carga para validar o requisito de desempenho com muitos
+  usuários simultâneos.
