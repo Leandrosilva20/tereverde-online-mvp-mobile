@@ -1,46 +1,214 @@
-:root{
-  --green-700:#166534;
-  --green-400:#57cc99;
-  --blue-100:#e6f7ff;
-  --bg:#f4fbf8;
-  --muted:#6b7280;
+:root {
+  --verde: #1f7a4c;
+  --verde-escuro: #14532d;
+  --verde-claro: #e8f5ec;
+  --texto: #1c1c1c;
+  --muted: #6b7280;
+  --borda: #d9e3dd;
+  --branco: #ffffff;
+  --alerta: #b91c1c;
+  --ok: #1f7a4c;
+  --atencao: #b45309;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#08321a}
-.container{max-width:1100px;margin:0 auto;padding:20px}
-.site-header{background:linear-gradient(90deg,var(--blue-100),#f0fff4);border-bottom:1px solid rgba(0,0,0,0.04)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;gap:12px;align-items:center}
-.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#dff6ff,#ccfbe3);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--green-700)}
-.subtitle{margin:0;color:var(--muted);font-size:13px}
-.nav{display:flex;gap:12px;align-items:center}
-.nav-link{color:var(--green-700);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px}
-.nav-link.ativo{background:var(--blue-100)}
-.login-btn{background:var(--green-400);color:white;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:700}
-.hero{padding:40px 0;display:flex;gap:20px;align-items:center}
-.hero-image img{width:100%;height:auto;border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,0.06)}
-.actions{margin-top:18px;display:flex;gap:12px}
-.btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
-.btn.primary{background:var(--green-700);color:white}
-.btn.ghost{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--green-700)}
-.section{padding:30px 0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:white;padding:16px;border-radius:12px;box-shadow:0 6px 20px rgba(16,24,40,0.04)}
-.site-footer{padding:18px 0;background:white;border-top:1px solid rgba(0,0,0,0.04);margin-top:28px;color:var(--muted)}
-.muted{color:var(--muted);font-size:13px}
-.controls{display:flex;gap:10px;align-items:center;margin:16px 0 24px}
-.controls input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef0}
-.controls select{padding:10px;border-radius:8px;border:1px solid #e6eef0}
-.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(3,7,18,0.45);padding:18px;z-index:2000}
-.modal[aria-hidden="false"]{display:flex}
-.modal-panel{background:white;padding:18px;border-radius:12px;max-width:460px;width:100%;position:relative;box-shadow:0 20px 60px rgba(2,6,23,0.2)}
-.modal-close{position:absolute;right:12px;top:10px;border:none;background:transparent;font-size:22px;cursor:pointer}
-.modal-actions{display:flex;gap:8px;margin-top:12px;justify-content:flex-end}
-.admin-table{width:100%;border-collapse:collapse;margin-top:12px}
-.admin-table th,.admin-table td{border:1px solid #e6eef0;padding:8px;text-align:left}
-.admin-actions{display:flex;gap:10px;margin-top:12px}
-@media(max-width:900px){
-  .hero{flex-direction:column}
-  .header-inner{flex-direction:column;align-items:flex-start}
-  .nav{flex-wrap:wrap}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: var(--texto);
+  background: #fafaf8;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 14px 20px;
+  gap: 12px;
+}
+
+.brand h1 { margin: 0; font-size: 1.3rem; }
+.subtitle { margin: 2px 0 0; font-size: 0.85rem; opacity: 0.85; }
+
+.nav { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+.nav-link {
+  color: var(--branco);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.nav-link:hover, .nav-link.ativo { background: rgba(255,255,255,0.15); }
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn.primary { background: var(--verde); color: #fff; }
+.btn.primary:hover { background: #17603b; }
+.btn.ghost { background: transparent; border: 1px solid var(--borda); color: var(--texto); }
+.btn.login-btn { background: #fff; color: var(--verde-escuro); font-weight: 600; }
+.btn.danger { background: #fff; color: var(--alerta); border: 1px solid var(--alerta); }
+.btn.small { padding: 4px 8px; font-size: 0.8rem; }
+
+/* Hero */
+.hero {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+.hero-left { flex: 1 1 320px; }
+.hero-left h2 { font-size: 1.8rem; margin-bottom: 10px; }
+.hero-image { flex: 1 1 260px; text-align: center; }
+.hero-image img { max-width: 100%; }
+.actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+
+.section { padding: 20px 0 40px; }
+.section h3 { font-size: 1.3rem; margin-bottom: 16px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 16px;
+}
+.card h4 { margin: 0 0 8px; color: var(--verde-escuro); }
+.card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+/* Badge de disponibilidade */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.badge.disponivel { background: #e6f4ea; color: var(--ok); }
+.badge.manutencao, .badge.lotado { background: #fef3e0; color: var(--atencao); }
+.badge.fechado, .badge.cancelado { background: #fde8e8; color: var(--alerta); }
+
+/* Listas de trilhas/eventos (páginas públicas) */
+.list-item {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.list-item .info h4 { margin: 0 0 4px; }
+.list-item .info p { margin: 2px 0; color: var(--muted); font-size: 0.9rem; }
+.list-item .status { text-align: right; }
+.list-item .status .horario { display: block; font-size: 0.82rem; color: var(--muted); margin-top: 6px; }
+
+.empty-msg { color: var(--muted); font-style: italic; }
+
+/* Admin */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.admin-table th, .admin-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--borda);
+  font-size: 0.9rem;
+}
+.admin-table th { background: var(--verde-claro); color: var(--verde-escuro); }
+.admin-actions { display: flex; gap: 10px; margin: 10px 0 30px; }
+
+.aviso-seguranca {
+  background: #fff8e1;
+  border: 1px solid #f0d78c;
+  color: #7a5a00;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 50;
+}
+.modal[aria-hidden="false"] { display: flex; }
+.modal-panel {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.modal input, .modal select {
+  width: 100%;
+  padding: 9px 10px;
+  margin: 8px 0;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.modal label { font-size: 0.85rem; color: var(--muted); display: block; margin-top: 8px; }
+.modal-actions { display: flex; gap: 10px; margin-top: 12px; }
+.muted { color: var(--muted); font-size: 0.85rem; }
+.erro { color: var(--alerta); font-size: 0.85rem; min-height: 18px; }
+
+.site-footer {
+  border-top: 1px solid var(--borda);
+  padding: 18px 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 30px;
 }
