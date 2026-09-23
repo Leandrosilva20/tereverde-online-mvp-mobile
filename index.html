@@ -1,85 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Circuito Terê Verde</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/main.js"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Circuito Terê Verde</title>
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="js/main.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <div>
-          <h1>Circuito Terê Verde</h1>
-          <p class="subtitle">Teresópolis — Ecoturismo & Biodiversidade</p>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link ativo">Início</a>
-        <a href="trilhas.html" class="nav-link">Trilhas</a>
-        <a href="biodiversidade.html" class="nav-link">Biodiversidade</a>
-        <button id="openLogin" class="btn login-btn">Login Admin</button>
-      </nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <h1>Circuito Terê Verde</h1>
+      <p class="subtitle">Teresópolis — Ecoturismo &amp; Biodiversidade</p>
     </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <h2>Explore as montanhas de Teresópolis</h2>
-        <p>Trilhas, cachoeiras e educação ambiental. Planeje sua visita com informações atualizadas sobre disponibilidade e eventos.</p>
-        <div class="actions">
-          <a href="trilhas.html" class="btn primary">Ver Trilhas</a>
-          <a href="biodiversidade.html" class="btn ghost">Eventos & Biodiversidade</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="images/hero.svg" alt="Montanhas de Teresópolis" />
-      </div>
-    </section>
-
-    <section class="section">
-      <h3>Parques em destaque</h3>
-      <div class="cards">
-        <article class="card">
-          <h4>Parque Nacional da Serra dos Órgãos</h4>
-          <p>Montanhas, cânions e trilhas clássicas.</p>
-        </article>
-        <article class="card">
-          <h4>Parque Estadual dos Três Picos</h4>
-          <p>Picos íngremes e biodiversidade rica.</p>
-        </article>
-        <article class="card">
-          <h4>Parque Natural Municipal Montanhas de Teresópolis</h4>
-          <p>Trilhas curtas, mirantes locais e educação ambiental.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div>© 2025 Circuito Terê Verde — Leandro Bragança da Silva</div>
-      <div>Contato: prefeitura@teresopolis.rj.br</div>
-    </div>
-  </footer>
-
-  <!-- Modal login (reutilizado pelas páginas) -->
-  <div id="loginModal" class="modal" aria-hidden="true">
-    <div class="modal-panel">
-      <button id="closeLogin" class="modal-close" aria-label="Fechar">&times;</button>
-      <h3>Acesso Administrativo</h3>
-      <p class="muted">Use: <strong>admin@tere.com</strong> / <strong>senha123</strong></p>
-      <input id="email" type="email" placeholder="Email" />
-      <input id="senha" type="password" placeholder="Senha" />
-      <div class="modal-actions">
-        <button id="loginBtn" class="btn primary">Entrar</button>
-        <button id="cancelLogin" class="btn ghost">Cancelar</button>
-      </div>
-      <p id="loginMsg" class="muted"></p>
-    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link ativo">Início</a>
+      <a href="trilhas.html" class="nav-link">Trilhas</a>
+      <a href="biodiversidade.html" class="nav-link">Biodiversidade &amp; Eventos</a>
+      <button id="openLogin" class="btn login-btn">Login Admin</button>
+    </nav>
   </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-left">
+      <h2>Explore as montanhas de Teresópolis</h2>
+      <p>Trilhas, cachoeiras e educação ambiental. Planeje sua visita com informações atualizadas sobre disponibilidade, horários e eventos nas unidades de conservação da região.</p>
+      <div class="actions">
+        <a href="trilhas.html" class="btn primary">Ver Trilhas</a>
+        <a href="biodiversidade.html" class="btn ghost">Eventos &amp; Biodiversidade</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero.svg" alt="Montanhas de Teresópolis" />
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Parques em destaque</h3>
+    <div class="cards">
+      <article class="card">
+        <h4>Parque Nacional da Serra dos Órgãos</h4>
+        <p>Montanhas, cânions e trilhas clássicas, incluindo a Pedra do Sino.</p>
+      </article>
+      <article class="card">
+        <h4>Parque Estadual dos Três Picos</h4>
+        <p>Picos íngremes e biodiversidade rica, maior unidade de conservação do estado.</p>
+      </article>
+      <article class="card">
+        <h4>Parque Natural Municipal Montanhas de Teresópolis</h4>
+        <p>Trilhas curtas, mirantes locais e educação ambiental.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>© 2026 Circuito Terê Verde — Projeto acadêmico</div>
+    <div>Teresópolis — RJ</div>
+  </div>
+</footer>
+
+<!-- Modal de login (reutilizado por todas as páginas via main.js) -->
+<div id="loginModal" class="modal" aria-hidden="true">
+  <div class="modal-panel">
+    <button id="closeLogin" class="modal-close" aria-label="Fechar">&times;</button>
+    <h3>Acesso Administrativo</h3>
+    <p class="muted">Área restrita para administradores do Circuito Terê Verde.</p>
+    <input id="email" type="email" placeholder="Email" autocomplete="username" />
+    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password" />
+    <div class="modal-actions">
+      <button id="loginBtn" class="btn primary">Entrar</button>
+      <button id="cancelLogin" class="btn ghost">Cancelar</button>
+    </div>
+    <p id="loginMsg" class="erro"></p>
+    <p class="muted">⚠️ Demonstração acadêmica: este login roda só no navegador (sem backend) e não deve ser usado como está em produção. Ver README.</p>
+  </div>
+</div>
 </body>
 </html>
