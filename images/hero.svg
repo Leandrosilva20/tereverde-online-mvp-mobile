@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600">
-  <rect width="1200" height="600" fill="#b8f2e6"/>
-  <g transform="translate(0,120)">
-    <path d="M0 400 C150 200 300 200 450 400 C600 600 750 300 900 400 C1050 500 1200 300 1200 300 L1200 600 L0 600 Z" fill="#a8e6c4"/>
-    <circle cx="1000" cy="120" r="40" fill="#fff2a8"/>
-  </g>
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#cfe8d8"/>
+  <polygon points="0,220 100,120 180,200 260,90 400,220 400,300 0,300" fill="#1f7a4c"/>
+  <polygon points="0,240 140,160 240,230 400,150 400,300 0,300" fill="#14532d"/>
+  <circle cx="330" cy="60" r="30" fill="#ffe28a"/>
 </svg>
