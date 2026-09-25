@@ -9,23 +9,44 @@
 <style>
   .page-intro {
     text-align: center;
+    padding: 2rem 1rem 1rem;
+    background: #f0f9f0;
+    border-radius: 12px;
     margin-bottom: 2rem;
   }
   .page-intro h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #1a2f23;
     margin-bottom: 0.5rem;
   }
   .page-intro p {
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 0.95rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
+  .category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .cat-btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  .cat-btn.active { background: #27ae60; color: white; }
+  .cat-btn:not(.active) { background: #e8e8e8; color: #444; }
+
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
     margin-bottom: 3rem;
   }
   .bio-card {
@@ -33,29 +54,76 @@
     overflow: hidden;
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     transition: transform 0.2s;
-    background: white;
   }
   .bio-card:hover {
     transform: translateY(-4px);
   }
-  .card-photo {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+  .card-header {
+    padding: 1rem;
+    color: white;
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-header.ave { background: linear-gradient(135deg, #f1c40f, #e67e22); }
+  .card-header.mamifero { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+  .card-header.planta { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+  .card-header.reptil { background: linear-gradient(135deg, #34495e, #2c3e50); }
+  .card-header.anfibio { background: linear-gradient(135deg, #1abc9c, #16a085); }
+  .card-tag {
+    font-size: 0.7rem;
+    background: rgba(255,255,255,0.25);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+  }
+  .card-icon {
+    font-size: 1.8rem;
+    opacity: 0.8;
   }
   .card-body {
-    padding: 1.25rem;
+    padding: 1.1rem;
+    background: white;
   }
   .card-body h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-    color: #1a4d30;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #222;
   }
   .card-body p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
   }
+  .card-meta {
+    font-size: 0.75rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+  .card-meta li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.35rem;
+    margin-bottom: 0.25rem;
+  }
+  .card-btn {
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: white;
+  }
+  .card-btn:hover { opacity: 0.9; }
+
   .events-section h2 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -104,35 +172,123 @@
 <main class="container">
 
   <div class="page-intro">
-    <h2>Biodiversidade da Região</h2>
-    <p>Conheça a riqueza natural de Teresópolis — fauna, flora e os eventos de educação ambiental que acontecem por aqui.</p>
+    <h2>Biodiversidade de Teresópolis</h2>
+    <p>A região abriga uma das maiores diversidades de espécies da Mata Atlântica, com fauna e flora únicas que fazem de Teresópolis um verdadeiro santuário ecológico.</p>
+    <div class="category-filters">
+      <button class="cat-btn active">Todos os Animais</button>
+      <button class="cat-btn">Aves</button>
+      <button class="cat-btn">Mamíferos</button>
+      <button class="cat-btn">Répteis</button>
+      <button class="cat-btn">Flora</button>
+    </div>
   </div>
 
   <div class="cards-grid">
-    <!-- Mata Atlântica -->
+    <!-- Ave — Bem-te-vi -->
     <div class="bio-card">
-      <img src="images/biodiversidade.PNG" alt="Mata Atlântica" class="card-photo">
+      <div class="card-header ave">
+        <span class="card-tag">Ave</span>
+        <span class="card-icon">🐦</span>
+      </div>
       <div class="card-body">
-        <h3>Mata Atlântica</h3>
-        <p>Um dos biomas mais ricos e ameaçados do país, com enorme diversidade de espécies endêmicas. A região abriga remanescentes de floresta ombrófila densa, com árvores de grande porte, bromélias e orquídeas.</p>
+        <h3>Bem-te-vi</h3>
+        <p>Ave muito comum na região, presente em áreas abertas, matas e jardins de Teresópolis.</p>
+        <ul class="card-meta" style="list-style:none; padding:0;">
+          <li>📍 Áreas abertas, beiras de mata</li>
+          <li>📅 Permanente — avistamento frequente</li>
+          <li>⏰ Diurno</li>
+        </ul>
+        <a href="#" class="card-btn" style="background:#f1c40f;">Ver Detalhes</a>
       </div>
     </div>
 
-    <!-- Avifauna -->
+    <!-- Ave — Tucano-de-bico-verde -->
     <div class="bio-card">
-      <img src="images/inicio.PNG" alt="Avifauna da região" class="card-photo">
+      <div class="card-header ave">
+        <span class="card-tag">Ave</span>
+        <span class="card-icon">🦜</span>
+      </div>
       <div class="card-body">
-        <h3>Avifauna</h3>
-        <p>Região privilegiada para observação de aves de altitude. Espécies como o Gavião-real, o Beija-flor-de-topete e a Cegonha-preta podem ser avistadas nos diferentes trechos da Serra dos Órgãos.</p>
+        <h3>Tucano-de-bico-verde</h3>
+        <p>Espécie emblemática da Mata Atlântica, dispersor de sementes essencial para a floresta.</p>
+        <ul class="card-meta" style="list-style:none; padding:0;">
+          <li>📍 Mata Atlântica de altitude</li>
+          <li>📅 Permanente — avistamento: manhã/tarde</li>
+          <li>⏰ Diurno</li>
+        </ul>
+        <a href="#" class="card-btn" style="background:#e67e22;">Ver Detalhes</a>
       </div>
     </div>
 
-    <!-- Fauna de Altitude -->
+    <!-- Mamífero — Sagui-da-serra -->
     <div class="bio-card">
-      <img src="images/trilha.PNG" alt="Fauna de altitude" class="card-photo">
+      <div class="card-header mamifero">
+        <span class="card-tag">Mamífero</span>
+        <span class="card-icon">🐒</span>
+      </div>
       <div class="card-body">
-        <h3>Fauna de Altitude</h3>
-        <p>Espécies adaptadas aos campos de altitude e formações rochosas do PARNASO e do Parque dos Três Picos. Veado-catingueiro, Quati e Jaguatirica compartilham o espaço com répteis e anfíbios de ocorrência restrita.</p>
+        <h3>Sagui-da-serra</h3>
+        <p>Primata pequeno e ágil, vive em grupos nas copas das árvores da floresta.</p>
+        <ul class="card-meta" style="list-style:none; padding:0;">
+          <li>📍 Remanescentes de Mata Atlântica</li>
+          <li>📅 Permanente — manhã e entardecer</li>
+          <li>⏰ Diurno</li>
+        </ul>
+        <a href="#" class="card-btn" style="background:#d35400;">Ver Detalhes</a>
+      </div>
+    </div>
+
+    <!-- Anfíbio — Perereca -->
+    <div class="bio-card">
+      <div class="card-header anfibio">
+        <span class="card-tag">Anfíbio</span>
+        <span class="card-icon">🐸</span>
+      </div>
+      <div class="card-body">
+        <h3>Perereca-da-Serra</h3>
+        <p>Espécie endêmica da Serra dos Órgãos, depende de ambientes úmidos e riachos.</p>
+        <ul class="card-meta" style="list-style:none; padding:0;">
+          <li>📍 Riachos e matas úmidas</li>
+          <li>📅 Outubro–Março (estação chuvosa)</li>
+          <li>⏰ Noturno</li>
+        </ul>
+        <a href="#" class="card-btn" style="background:#16a085;">Ver Detalhes</a>
+      </div>
+    </div>
+
+    <!-- Réptil -->
+    <div class="bio-card">
+      <div class="card-header reptil">
+        <span class="card-tag">Réptil</span>
+        <span class="card-icon">🦎</span>
+      </div>
+      <div class="card-body">
+        <h3>Lagartixa-da-Serra</h3>
+        <p>Peço pequeno e ágil, encontrado em troncos e pedras ensolaradas.</p>
+        <ul class="card-meta" style="list-style:none; padding:0;">
+          <li>📍 Áreas rochosas e bordas de mata</li>
+          <li>📅 Permanente — dias ensolarados</li>
+          <li>⏰ Diurno</li>
+        </ul>
+        <a href="#" class="card-btn" style="background:#34495e;">Ver Detalhes</a>
+      </div>
+    </div>
+
+    <!-- Flora -->
+    <div class="bio-card">
+      <div class="card-header planta">
+        <span class="card-tag">Flora</span>
+        <span class="card-icon">🌸</span>
+      </div>
+      <div class="card-body">
+        <h3>Orquídea da Serra</h3>
+        <p>Espécies nativas que encantam pela beleza e importância ecológica nas matas de altitude.</p>
+        <ul class="card-meta" style="list-style:none; padding:0;">
+          <li>📍 Troncos e rochas — epífitas</li>
+          <li>📅 Floração: primavera</li>
+          <li>⏰ Permanente</li>
+        </ul>
+        <a href="#" class="card-btn" style="background:#8e44ad;">Ver Detalhes</a>
       </div>
     </div>
   </div>
