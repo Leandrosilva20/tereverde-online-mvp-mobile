@@ -55,13 +55,17 @@
   .trail-card:hover {
     transform: translateY(-4px);
   }
-  .card-photo {
+
+  /* Área da foto no topo do card */
+  .card-photo-header {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  .photo-container {
+    height: 180px;
     position: relative;
+  }
+  .card-photo-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .difficulty-tag {
     position: absolute;
@@ -74,6 +78,7 @@
     font-size: 0.75rem;
     font-weight: bold;
   }
+
   .card-body {
     padding: 1.25rem;
   }
@@ -117,6 +122,7 @@
   .card-btn:hover {
     opacity: 0.9;
   }
+
   /* Cores dos botões */
   .btn-pedra { background: #e74c3c; }
   .btn-travessia { background: #f39c12; }
@@ -158,8 +164,8 @@
 
     <!-- 1 — Pedra do Sino -->
     <div class="trail-card">
-      <div class="photo-container">
-        <img src="images/dedo-de-deus.jpg" alt="Pedra do Sino" class="card-photo">
+      <div class="card-photo-header">
+        <img src="images/dedo-de-deus.jpg" alt="Pedra do Sino">
         <span class="difficulty-tag">Difícil</span>
       </div>
       <div class="card-body">
@@ -176,8 +182,8 @@
 
     <!-- 2 — Travessia Petrópolis × Teresópolis -->
     <div class="trail-card">
-      <div class="photo-container">
-        <img src="images/inicio.PNG" alt="Travessia Petrópolis × Teresópolis" class="card-photo">
+      <div class="card-photo-header">
+        <img src="images/inicio.PNG" alt="Travessia Petrópolis × Teresópolis">
         <span class="difficulty-tag">Difícil</span>
       </div>
       <div class="card-body">
@@ -194,8 +200,8 @@
 
     <!-- 3 — Vale dos Deuses × Vale dos Frades -->
     <div class="trail-card">
-      <div class="photo-container">
-        <img src="images/biodversidade.PNG" alt="Vale dos Deuses" class="card-photo">
+      <div class="card-photo-header">
+        <img src="images/biodversidade.PNG" alt="Vale dos Deuses">
         <span class="difficulty-tag">Moderada</span>
       </div>
       <div class="card-body">
@@ -212,8 +218,8 @@
 
     <!-- 4 — Dois Bicos + Cachoeira dos Frades -->
     <div class="trail-card">
-      <div class="photo-container">
-        <img src="images/trilha.PNG" alt="Dois Bicos e Cachoeira dos Frades" class="card-photo">
+      <div class="card-photo-header">
+        <img src="images/trilha.PNG" alt="Dois Bicos e Cachoeira dos Frades">
         <span class="difficulty-tag">Moderada</span>
       </div>
       <div class="card-body">
@@ -230,8 +236,8 @@
 
     <!-- 5 — Mirante do Inferno / Agulha do Diabo -->
     <div class="trail-card">
-      <div class="photo-container">
-        <img src="images/dedo-de-deus.jpg" alt="Agulha do Diabo" class="card-photo">
+      <div class="card-photo-header">
+        <img src="images/dedo-de-deus.jpg" alt="Agulha do Diabo">
         <span class="difficulty-tag">Difícil</span>
       </div>
       <div class="card-body">
