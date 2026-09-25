@@ -1,4 +1,4 @@
-# 🌿 Circuito Terê Verde
+# Circuito Terê Verde
 
 > **Ecoturismo & Biodiversidade em Teresópolis – RJ**
 
@@ -18,7 +18,7 @@ O **Circuito Terê Verde** é uma plataforma digital que reúne informações so
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 tereverde-online-mvp-mobile/
 ├── index.html # Página inicial
 ├── trilhas.html # Página de trilhas e percursos
@@ -35,7 +35,7 @@ tereverde-online-mvp-mobile/
 
 ---
 
-## 🏞️ Parques em Destaque
+## Parques em Destaque
 
 | Parque | Descrição |
 |---|---|
@@ -45,7 +45,7 @@ tereverde-online-mvp-mobile/
 
 ---
 
-## 🚀 Como Acessar
+## Como Acessar
 
 1. Visite: **https://leandrosilva20.github.io/tereverde-online-mvp-mobile/**
 2. Navegue entre as seções:
@@ -55,7 +55,7 @@ tereverde-online-mvp-mobile/
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5** — Estrutura e semântica
 - **CSS3** — Estilos responsivos e design
@@ -64,13 +64,13 @@ tereverde-online-mvp-mobile/
 
 ---
 
-## 📸 Símbolo da Região
+## Símbolo da Região
 
 > **Dedo de Deus** — Cartão postal de Teresópolis e um dos principais ícones da Serra dos Órgãos.
 
 ---
 
-## 🌱 Práticas de Visitação Responsável
+## Práticas de Visitação Responsável
 
 - ✅ Respeite as sinalizações e percursos autorizados
 - ✅ Leve sua água e recipientes reutilizáveis
@@ -80,14 +80,14 @@ tereverde-online-mvp-mobile/
 
 ---
 
-## 📌 Status do Projeto
+## Status do Projeto
 
 - ✅ MVP concluído e publicado
 - 🔄 Em desenvolvimento — novas funcionalidades em breve
 
 ---
 
-## 👤 Créditos
+##  Créditos
 
 **Feito por Leandro Silva**  
 © 2026 Circuito Terê Verde — Todos os direitos reservados.
