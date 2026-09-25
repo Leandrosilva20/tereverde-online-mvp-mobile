@@ -3,225 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Biodiversidade & Eventos — Circuito Terê Verde</title>
+<title>Bem-te-vi — Detalhes | Circuito Terê Verde</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-}
-body {
-  background-color: #f8faf6;
-  color: #1f2e25;
-  line-height: 1.6;
-}
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-.site-header {
-  background-color: #1a4d30;
-  color: white;
-  padding: 1rem 0;
-  margin-bottom: 2rem;
-}
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.brand h1 {
-  font-size: 1.4rem;
-  margin-bottom: 0.2rem;
-}
-.brand p {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-.nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: inline-block;
-}
-.nav a.ativo {
-  border-bottom: 2px solid #fff;
-  font-weight: bold;
-}
-.nav button {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 0.5rem;
-}
-
-.page-intro {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: #f0f9f0;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-}
-.page-intro h2 {
-  font-size: 1.4rem;
-  color: #1a2f23;
-  margin-bottom: 0.5rem;
-}
-.page-intro p {
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto 1.25rem;
-  font-size: 0.9rem;
-}
-
-.category-filters {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.cat-btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.cat-btn.active { 
-  background: #27ae60; 
-  color: white; 
-}
-.cat-btn:not(.active) { 
-  background: #e8e8e8; 
-  color: #444; 
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-  margin-bottom: 3rem;
-}
-.bio-card {
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  background: white;
-  transition: all 0.3s ease;
-}
-.bio-card.escondido {
-  display: none !important;
-}
-.bio-card:hover {
-  transform: translateY(-4px);
-}
-.card-header {
-  padding: 1rem;
-  color: white;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.card-header.ave { background: linear-gradient(135deg, #f1c40f, #e67e22); }
-.card-header.mamifero { background: linear-gradient(135deg, #e74c3c, #c0392b); }
-.card-header.anfibio { background: linear-gradient(135deg, #1abc9c, #16a085); }
-.card-header.reptil { background: linear-gradient(135deg, #34495e, #2c3e50); }
-.card-header.planta { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
-.card-tag {
-  font-size: 0.75rem;
-  background: rgba(255,255,255,0.25);
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
-  font-weight: bold;
-}
-.card-icon {
-  font-size: 1.8rem;
-}
-.card-body {
-  padding: 1.25rem;
-}
-.card-body h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #222;
-}
-.card-body p {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-.card-meta {
-  list-style: none;
-  margin-bottom: 1rem;
-  font-size: 0.8rem;
-  color: #555;
-}
-.card-meta li {
-  margin-bottom: 0.4rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.card-btn {
-  width: 100%;
-  padding: 0.7rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  font-size: 0.9rem;
-  color: white;
-}
-.card-btn:hover {
-  opacity: 0.9;
-}
-
-.events-section h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #1a2f23;
-}
-.event-card {
-  border: 1px solid #8fa899;
-  border-radius: 8px;
-  padding: 1.25rem;
-  margin-bottom: 1rem;
-  background-color: #f0f2e9;
-}
-.event-card h4 {
-  margin-bottom: 0.5rem;
-  color: #1a2f23;
-}
-.event-date {
-  font-weight: bold;
-  color: #9b5a2f;
-  margin-bottom: 0.5rem;
-}
-.lotado {
-  color: #c0392b;
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-.site-footer {
-  text-align: center;
-  padding: 2rem;
-  color: #555;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-  background: #e9ece4;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: #f8faf6; color: #1f2e25; line-height: 1.7; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+.site-header { background: #1a4d30; color: white; padding: 1rem 0; margin-bottom: 2rem; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.brand h1 { font-size: 1.3rem; }
+.nav a { color: white; text-decoration: none; padding: 0.5rem 1rem; }
+.back-link { display: inline-block; margin: 1rem 0; color: #27ae60; text-decoration: none; font-weight: 500; }
+.back-link:hover { text-decoration: underline; }
+.detail-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 3rem; }
+.detail-header { background: linear-gradient(135deg, #f1c40f, #e67e22); color: white; padding: 2rem; text-align: center; }
+.detail-header h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.detail-icon { font-size: 3rem; margin-bottom: 0.5rem; }
+.detail-body { padding: 2rem; }
+.detail-body h3 { color: #1a4d30; margin: 1.5rem 0 0.8rem; font-size: 1.1rem; }
+.detail-body p { margin-bottom: 1rem; color: #555; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.info-item { background: #f8f9f5; padding: 1rem; border-radius: 8px; }
+.info-item strong { display: block; color: #1a4d30; margin-bottom: 0.3rem; font-size: 0.9rem; }
+.info-item span { color: #555; font-size: 0.9rem; }
+.site-footer { text-align: center; padding: 2rem; color: #555; font-size: 0.9rem; background: #e9ece4; margin-top: 2rem; }
 </style>
 </head>
 <body>
@@ -229,194 +33,72 @@ body {
   <div class="container header-inner">
     <div class="brand">
       <h1>Circuito Terê Verde</h1>
-      <p>Teresópolis — Ecoturismo, Biodiversidade &amp; Aventura</p>
     </div>
     <nav class="nav">
-      <a href="index.html">Início</a>
-      <a href="trilhas.html">Trilhas</a>
-      <a href="biodiversidade.html" class="ativo">Biodiversidade &amp; Eventos</a>
-      <button>Login Admin</button>
+      <a href="biodiversidade.html">← Voltar</a>
     </nav>
   </div>
 </header>
 <main class="container">
 
-  <div class="page-intro">
-    <h2>Biodiversidade de Teresópolis</h2>
-    <p>A região abriga uma das maiores diversidades de espécies da Mata Atlântica, com fauna e flora únicas que fazem de Teresópolis um verdadeiro santuário ecológico.</p>
-    <div class="category-filters">
-      <button class="cat-btn active" data-filtro="todos">Todos os Animais</button>
-      <button class="cat-btn" data-filtro="ave">Aves</button>
-      <button class="cat-btn" data-filtro="mamifero">Mamíferos</button>
-      <button class="cat-btn" data-filtro="anfibio">Anfibios</button>
-      <button class="cat-btn" data-filtro="reptil">Répteis</button>
-      <button class="cat-btn" data-filtro="planta">Flora</button>
+  <a href="biodiversidade.html" class="back-link">← Voltar para Biodiversidade</a>
+
+  <div class="detail-card">
+    <div class="detail-header">
+      <div class="detail-icon">🐦</div>
+      <h2>Bem-te-vi</h2>
+      <p>Ave comum e carismática da fauna brasileira</p>
+    </div>
+    <div class="detail-body">
+      <h3>Sobre a Espécie</h3>
+      <p>O Bem-te-vi é uma das aves mais conhecidas e reconhecidas no Brasil. De canto marcante que parece pronunciar o próprio nome, é comum vê-lo em áreas abertas, jardins, bordas de mata e até nas cidades. É uma espécie adaptável, inteligente e bastante sociável.</p>
+      
+      <h3>Características</h3>
+      <p>Possui plumagem amarela no peito e barriga, com coroa preta e faixa branca na cabeça. Alimenta-se de frutos, insetos e pequenos vertebrados, sendo um importante dispersor de sementes e controlador de pragas naturais.</p>
+      
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Categoria</strong>
+          <span>Ave</span>
+        </div>
+        <div class="info-item">
+          <strong>Família</strong>
+          <span>Tyrannidae</span>
+        </div>
+        <div class="info-item">
+          <strong>Habitat</strong>
+          <span>Áreas abertas, jardins, bordas de mata</span>
+        </div>
+        <div class="info-item">
+          <strong>Horário</strong>
+          <span>Diurno — manhã e tarde</span>
+        </div>
+        <div class="info-item">
+          <strong>Avistamento</strong>
+          <span>Frequente — fácil de ver</span>
+        </div>
+        <div class="info-item">
+          <strong>Status</strong>
+          <span>✅ Preservação estável</span>
+        </div>
+      </div>
+
+      <h3>Onde encontrar em Teresópolis</h3>
+      <p>É possível avistar o Bem-te-vi em praticamente toda a região, desde áreas urbanas até as bordas das matas do Parque Nacional da Serra dos Órgãos e do Parque Estadual dos Três Picos.</p>
+      
+      <h3>Curiosidades</h3>
+      <ul style="margin-left: 1.2rem; color: #555;">
+        <li style="margin-bottom: 0.5rem;">Seu nome vem da imitação do canto: "Bem-te-vi, bem-te-vi!"</li>
+        <li style="margin-bottom: 0.5rem;">Constrói ninhos abertos em forma de taça em galhos altos</li>
+        <li>Defende seu território com coragem, afastando aves maiores</li>
+      </ul>
     </div>
   </div>
-
-  <div class="cards-grid">
-
-    <!-- AVE 1 -->
-    <div class="bio-card" data-tipo="ave">
-      <div class="card-header ave">
-        <span class="card-tag">Ave</span>
-        <span class="card-icon">🐦</span>
-      </div>
-      <div class="card-body">
-        <h3>Bem-te-vi</h3>
-        <p>Ave muito comum na região, presente em áreas abertas, matas e jardins de Teresópolis.</p>
-        <ul class="card-meta">
-          <li>📍 Áreas abertas, beiras de mata</li>
-          <li>📅 Permanente — avistamento frequente</li>
-          <li>⏰ Diurno</li>
-        </ul>
-        <a href="#" class="card-btn" style="background:#f1c40f;">Ver Detalhes</a>
-      </div>
-    </div>
-
-    <!-- AVE 2 -->
-    <div class="bio-card" data-tipo="ave">
-      <div class="card-header ave">
-        <span class="card-tag">Ave</span>
-        <span class="card-icon">🦜</span>
-      </div>
-      <div class="card-body">
-        <h3>Tucano-de-bico-verde</h3>
-        <p>Espécie emblemática da Mata Atlântica, dispersor de sementes essencial para a floresta.</p>
-        <ul class="card-meta">
-          <li>📍 Mata Atlântica de altitude</li>
-          <li>📅 Permanente — manhã e tarde</li>
-          <li>⏰ Diurno</li>
-        </ul>
-        <a href="#" class="card-btn" style="background:#e67e22;">Ver Detalhes</a>
-      </div>
-    </div>
-
-    <!-- MAMÍFERO -->
-    <div class="bio-card" data-tipo="mamifero">
-      <div class="card-header mamifero">
-        <span class="card-tag">Mamífero</span>
-        <span class="card-icon">🐒</span>
-      </div>
-      <div class="card-body">
-        <h3>Sagui-da-serra</h3>
-        <p>Primata pequeno e ágil, vive em grupos nas copas das árvores da floresta.</p>
-        <ul class="card-meta">
-          <li>📍 Remanescentes de Mata Atlântica</li>
-          <li>📅 Permanente — manhã e entardecer</li>
-          <li>⏰ Diurno</li>
-        </ul>
-        <a href="#" class="card-btn" style="background:#d35400;">Ver Detalhes</a>
-      </div>
-    </div>
-
-    <!-- ANFÍBIO -->
-    <div class="bio-card" data-tipo="anfibio">
-      <div class="card-header anfibio">
-        <span class="card-tag">Anfíbio</span>
-        <span class="card-icon">🐸</span>
-      </div>
-      <div class="card-body">
-        <h3>Perereca-da-Serra</h3>
-        <p>Espécie endêmica da Serra dos Órgãos, depende de ambientes úmidos e riachos.</p>
-        <ul class="card-meta">
-          <li>📍 Riachos e matas úmidas</li>
-          <li>📅 Outubro–Março (estação chuvosa)</li>
-          <li>⏰ Noturno</li>
-        </ul>
-        <a href="#" class="card-btn" style="background:#16a085;">Ver Detalhes</a>
-      </div>
-    </div>
-
-    <!-- RÉPTIL -->
-    <div class="bio-card" data-tipo="reptil">
-      <div class="card-header reptil">
-        <span class="card-tag">Réptil</span>
-        <span class="card-icon">🦎</span>
-      </div>
-      <div class="card-body">
-        <h3>Lagartixa-da-Serra</h3>
-        <p>Peço pequeno e ágil, encontrado em troncos e pedras ensolaradas.</p>
-        <ul class="card-meta">
-          <li>📍 Áreas rochosas e bordas de mata</li>
-          <li>📅 Permanente — dias ensolarados</li>
-          <li>⏰ Diurno</li>
-        </ul>
-        <a href="#" class="card-btn" style="background:#34495e;">Ver Detalhes</a>
-      </div>
-    </div>
-
-    <!-- FLORA -->
-    <div class="bio-card" data-tipo="planta">
-      <div class="card-header planta">
-        <span class="card-tag">Flora</span>
-        <span class="card-icon">🌸</span>
-      </div>
-      <div class="card-body">
-        <h3>Orquídea da Serra</h3>
-        <p>Espécies nativas que encantam pela beleza e importância ecológica nas matas de altitude.</p>
-        <ul class="card-meta">
-          <li>📍 Troncos e rochas — epífitas</li>
-          <li>📅 Floração: primavera</li>
-          <li>⏰ Permanente</li>
-        </ul>
-        <a href="#" class="card-btn" style="background:#8e44ad;">Ver Detalhes</a>
-      </div>
-    </div>
-
-  </div>
-
-  <section class="events-section">
-    <h2>Próximos Eventos</h2>
-
-    <div class="event-card">
-      <h4>Mutirão de Limpeza de Trilhas</h4>
-      <div class="event-date">Parque Natural Municipal · 04/10/2026</div>
-      <p>Horário: 8h às 12h</p>
-      <p>Participe da conservação dos caminhos! Leve água, chapéu e disposição.</p>
-    </div>
-
-    <div class="event-card">
-      <h4>Caminhada Guiada de Observação de Aves</h4>
-      <div class="event-date">PARNASO · 18/10/2026</div>
-      <p>Horário: 6h30</p>
-      <p class="lotado">Vagas esgotadas</p>
-    </div>
-  </section>
 
 </main>
 <footer class="site-footer">
   <div>© 2026 Circuito Terê Verde — Feito por Leandro Silva</div>
   <div>Teresópolis — RJ</div>
 </footer>
-
-<script>
-// FILTROS — funcionando garantido
-document.addEventListener('DOMContentLoaded', function() {
-  const botoes = document.querySelectorAll('.cat-btn');
-  const cards = document.querySelectorAll('.bio-card');
-
-  botoes.forEach(botao => {
-    botao.addEventListener('click', function() {
-      // Ativa botão clicado
-      botoes.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-
-      const filtro = this.getAttribute('data-filtro');
-
-      // Mostra ou esconde cada card
-      cards.forEach(card => {
-        const tipo = card.getAttribute('data-tipo');
-        if (filtro === 'todos' || tipo === filtro) {
-          card.classList.remove('escondido');
-        } else {
-          card.classList.add('escondido');
-        }
-      });
-    });
-  });
-});
-</script>
-
 </body>
 </html>
