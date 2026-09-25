@@ -35,28 +35,36 @@
     }
     h2 {
       color: #205c35;
-      margin: 2rem 0 1rem;
-      font-size: 1.35rem;
+      margin: 2.5rem 0 1.2rem;
+      font-size: 1.4rem;
     }
     .trilha {
       background: #ffffff;
       border-left: 4px solid #205c35;
-      border-radius: 0 10px 10px 0;
-      padding: 1.4rem 1.6rem;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 2px 8px rgba(32, 92, 53, 0.08);
-      transition: transform 0.2s ease;
+      border-radius: 0 12px 12px 0;
+      padding: 1.6rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 3px 10px rgba(32, 92, 53, 0.08);
+      overflow: hidden;
     }
-    .trilha:hover {
-      transform: translateX(4px);
+    .trilha-conteudo {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
     }
-    .trilha h3 {
+    .trilha-foto {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .trilha-texto h3 {
       color: #1a472a;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      font-size: 1.15rem;
     }
-    .trilha p {
-      margin-bottom: 0.7rem;
+    .trilha-texto p {
+      margin-bottom: 0.8rem;
       color: #374151;
     }
     a {
@@ -68,7 +76,7 @@
       text-decoration: underline;
     }
     ul {
-      padding-left: 1.5rem;
+      padding-left: 1.6rem;
       margin: 1rem 0;
     }
     ul li {
@@ -80,6 +88,17 @@
       border-top: 1px solid #d1d5db;
       color: #6b7280;
       font-size: 0.9rem;
+    }
+    @media (min-width: 640px) {
+      .trilha-conteudo {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .trilha-foto {
+        width: 280px;
+        min-width: 280px;
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -94,33 +113,58 @@
   <h2>Trilhas e Travessias da Região</h2>
 
   <div class="trilha">
-    <h3>1 — Travessia Petrópolis × Teresópolis</h3>
-    <p>Considerada a travessia mais bonita do Brasil, realizada em 3 dias com paisagens magníficas. Percorre o coração da Serra dos Órgãos, passando pelo Morro do Açu, Portais de Hércules e a Pedra do Sino (2.275 m).</p>
-    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank">Ver detalhes e reservar →</a></p>
+    <div class="trilha-conteudo">
+      <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&h=400&fit=crop" alt="Serra dos Órgãos - Travessia Petrópolis Teresópolis" class="trilha-foto">
+      <div class="trilha-texto">
+        <h3>1 — Travessia Petrópolis × Teresópolis</h3>
+        <p>Considerada a travessia mais bonita do Brasil, realizada em 3 dias com paisagens magníficas. Percorre o coração da Serra dos Órgãos, passando pelo Morro do Açu, Portais de Hércules e a Pedra do Sino (2.275 m).</p>
+        <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank">Ver detalhes e reservar →</a></p>
+      </div>
+    </div>
   </div>
 
   <div class="trilha">
-    <h3>2 — Travessia Vale dos Deuses × Vale dos Frades</h3>
-    <p>Uma das mais belas da região, cercada por montanhas imponentes. Feita em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como Caixa de Fósforos e Cabeça de Dragão.</p>
-    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank">Ver detalhes e reservar →</a></p>
+    <div class="trilha-conteudo">
+      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&h=400&fit=crop" alt="Vale dos Deuses e Vale dos Frades" class="trilha-foto">
+      <div class="trilha-texto">
+        <h3>2 — Travessia Vale dos Deuses × Vale dos Frades</h3>
+        <p>Uma das mais belas da região, cercada por montanhas imponentes. Feita em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como Caixa de Fósforos e Cabeça de Dragão.</p>
+        <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank">Ver detalhes e reservar →</a></p>
+      </div>
+    </div>
   </div>
 
   <div class="trilha">
-    <h3>3 — Pedra do Sino</h3>
-    <p>Ponto mais alto da Serra dos Órgãos. Trilha tradicional, sem grandes dificuldades técnicas apesar da distância. Recomendada em 2 dias para apreciar o nascer do sol no cume.</p>
-    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank">Ver detalhes e reservar →</a></p>
+    <div class="trilha-conteudo">
+      <img src="https://images.unsplash.com/photo-1454496522484-85055bb5b520?w=600&h=400&fit=crop" alt="Pedra do Sino - Serra dos Órgãos" class="trilha-foto">
+      <div class="trilha-texto">
+        <h3>3 — Pedra do Sino</h3>
+        <p>Ponto mais alto da Serra dos Órgãos. Trilha tradicional, sem grandes dificuldades técnicas apesar da distância. Recomendada em 2 dias para apreciar o nascer do sol no cume.</p>
+        <p><a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank">Ver detalhes e reservar →</a></p>
+      </div>
+    </div>
   </div>
 
   <div class="trilha">
-    <h3>4 — Dois Bicos + Cachoeira dos Frades</h3>
-    <p>Trilha de 1 dia, nível moderado, no Vale dos Frades. Percorre áreas de fazenda até o cume com vista deslumbrante. No retorno, banho nas águas cristalinas da Cachoeira dos Frades.</p>
-    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank">Ver detalhes e reservar →</a></p>
+    <div class="trilha-conteudo">
+      <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=600&h=400&fit=crop" alt="Dois Bicos e Cachoeira dos Frades" class="trilha-foto">
+      <div class="trilha-texto">
+        <h3>4 — Dois Bicos + Cachoeira dos Frades</h3>
+        <p>Trilha de 1 dia, nível moderado, no Vale dos Frades. Percorre áreas de fazenda até o cume com vista deslumbrante. No retorno, banho nas águas cristalinas da Cachoeira dos Frades.</p>
+        <p><a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank">Ver detalhes e reservar →</a></p>
+      </div>
+    </div>
   </div>
 
   <div class="trilha">
-    <h3>5 — Mirante do Inferno / Agulha do Diabo</h3>
-    <p>Trilha de 1 dia, nível pesado, seguindo trecho da Pedra do Sino. O destino é um dos mais belos mirantes do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.</p>
-    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank">Ver detalhes e reservar →</a></p>
+    <div class="trilha-conteudo">
+      <img src="https://images.unsplash.com/photo-1509316785225-337f6831d0d3?w=600&h=400&fit=crop" alt="Mirante do Inferno e Agulha do Diabo" class="trilha-foto">
+      <div class="trilha-texto">
+        <h3>5 — Mirante do Inferno / Agulha do Diabo</h3>
+        <p>Trilha de 1 dia, nível pesado, seguindo trecho da Pedra do Sino. O destino é um dos mais belos mirantes do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.</p>
+        <p><a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank">Ver detalhes e reservar →</a></p>
+      </div>
+    </div>
   </div>
 
   <h2>Biodiversidade da Região</h2>
