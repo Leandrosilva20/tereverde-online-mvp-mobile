@@ -25,18 +25,31 @@ tereverde-online-mvp-mobile/
 ├── index.html # Página inicial
 
 ├── trilhas.html # Página de trilhas e percursos
+
 ├── biodiversidade.html # Flora, fauna e eventos
+
 ├── admin.html # Painel administrativo
+
 ├── painel.html # Painel de controle
+
 ├── css/ # Estilos visuais
+
 ├── js/ # Comportamentos e interatividade
+
 ├── images/ # Imagens e recursos visuais
+
 │ ├── dedo-de-deus.jpg # Banner principal — Dedo de Deus
+
 │ ├── biodversidade.PNG
+
 │ ├── inicio.PNG
+
 │ └── trilha.PNG
+
 ├── floresta.svg # Ilustração da página inicial
+
 └── README.md
+
 plaintext
 
 ---
