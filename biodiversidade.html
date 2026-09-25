@@ -4,169 +4,224 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Biodiversidade & Eventos — Circuito Terê Verde</title>
-<link rel="stylesheet" href="css/style.css" />
-<script defer src="js/main.js"></script>
 <style>
-  .page-intro {
-    text-align: center;
-    padding: 2rem 1rem 1rem;
-    background: #f0f9f0;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-  }
-  .page-intro h2 {
-    font-size: 1.4rem;
-    color: #1a2f23;
-    margin-bottom: 0.5rem;
-  }
-  .page-intro p {
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto 1.25rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-  .category-filters {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-  }
-  .cat-btn {
-    padding: 0.4rem 0.8rem;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .cat-btn.active { 
-    background: #27ae60; 
-    color: white; 
-  }
-  .cat-btn:not(.active) { 
-    background: #e8e8e8; 
-    color: #444; 
-  }
-  .cat-btn:not(.active):hover {
-    background: #d5d5d5;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+body {
+  background-color: #f8faf6;
+  color: #1f2e25;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.site-header {
+  background-color: #1a4d30;
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.brand h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+.brand p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+.nav a.ativo {
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+.nav button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
 
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-    margin-bottom: 3rem;
-  }
-  .bio-card {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-  }
-  .bio-card.hidden {
-    display: none;
-  }
-  .bio-card:hover {
-    transform: translateY(-4px);
-  }
-  .card-header {
-    padding: 1rem;
-    color: white;
-    position: relative;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .card-header.ave { background: linear-gradient(135deg, #f1c40f, #e67e22); }
-  .card-header.mamifero { background: linear-gradient(135deg, #e74c3c, #c0392b); }
-  .card-header.planta { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
-  .card-header.reptil { background: linear-gradient(135deg, #34495e, #2c3e50); }
-  .card-header.anfibio { background: linear-gradient(135deg, #1abc9c, #16a085); }
-  .card-tag {
-    font-size: 0.7rem;
-    background: rgba(255,255,255,0.25);
-    padding: 0.2rem 0.5rem;
-    border-radius: 12px;
-    font-weight: bold;
-  }
-  .card-icon {
-    font-size: 1.8rem;
-    opacity: 0.8;
-  }
-  .card-body {
-    padding: 1.1rem;
-    background: white;
-  }
-  .card-body h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: #222;
-  }
-  .card-body p {
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-  }
-  .card-meta {
-    font-size: 0.75rem;
-    color: #555;
-    margin-bottom: 0.75rem;
-    list-style: none;
-    padding: 0;
-  }
-  .card-meta li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.35rem;
-    margin-bottom: 0.25rem;
-  }
-  .card-btn {
-    width: 100%;
-    padding: 0.6rem;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    font-size: 0.85rem;
-    color: white;
-  }
-  .card-btn:hover { opacity: 0.9; }
+.page-intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f0f9f0;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+.page-intro h2 {
+  font-size: 1.4rem;
+  color: #1a2f23;
+  margin-bottom: 0.5rem;
+}
+.page-intro p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 1.25rem;
+  font-size: 0.9rem;
+}
 
-  .events-section h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #1a2f23;
-  }
-  .event-card {
-    border: 1px solid #8fa899;
-    border-radius: 8px;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-    background-color: #f0f2e9;
-  }
-  .event-card h4 {
-    margin: 0 0 0.5rem 0;
-    color: #1a2f23;
-    font-size: 1rem;
-  }
-  .event-date {
-    font-weight: bold;
-    color: #9b5a2f;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-  }
-  .lotado {
-    color: #c0392b;
-    font-weight: bold;
-    margin-top: 0.5rem;
-  }
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.cat-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cat-btn.active { 
+  background: #27ae60; 
+  color: white; 
+}
+.cat-btn:not(.active) { 
+  background: #e8e8e8; 
+  color: #444; 
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+.bio-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  background: white;
+  transition: all 0.3s ease;
+}
+.bio-card.escondido {
+  display: none !important;
+}
+.bio-card:hover {
+  transform: translateY(-4px);
+}
+.card-header {
+  padding: 1rem;
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-header.ave { background: linear-gradient(135deg, #f1c40f, #e67e22); }
+.card-header.mamifero { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.card-header.anfibio { background: linear-gradient(135deg, #1abc9c, #16a085); }
+.card-header.reptil { background: linear-gradient(135deg, #34495e, #2c3e50); }
+.card-header.planta { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+.card-tag {
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.25);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.card-icon {
+  font-size: 1.8rem;
+}
+.card-body {
+  padding: 1.25rem;
+}
+.card-body h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.card-body p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.card-meta {
+  list-style: none;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: #555;
+}
+.card-meta li {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.card-btn {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+.card-btn:hover {
+  opacity: 0.9;
+}
+
+.events-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1a2f23;
+}
+.event-card {
+  border: 1px solid #8fa899;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background-color: #f0f2e9;
+}
+.event-card h4 {
+  margin-bottom: 0.5rem;
+  color: #1a2f23;
+}
+.event-date {
+  font-weight: bold;
+  color: #9b5a2f;
+  margin-bottom: 0.5rem;
+}
+.lotado {
+  color: #c0392b;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  background: #e9ece4;
+}
 </style>
 </head>
 <body>
@@ -174,13 +229,13 @@
   <div class="container header-inner">
     <div class="brand">
       <h1>Circuito Terê Verde</h1>
-      <p class="subtitle">Teresópolis — Ecoturismo, Biodiversidade &amp; Aventura</p>
+      <p>Teresópolis — Ecoturismo, Biodiversidade &amp; Aventura</p>
     </div>
     <nav class="nav">
-      <a href="index.html" class="nav-link">Início</a>
-      <a href="trilhas.html" class="nav-link">Trilhas</a>
-      <a href="biodiversidade.html" class="nav-link ativo">Biodiversidade &amp; Eventos</a>
-      <button id="openLogin" class="btn login-btn">Login Admin</button>
+      <a href="index.html">Início</a>
+      <a href="trilhas.html">Trilhas</a>
+      <a href="biodiversidade.html" class="ativo">Biodiversidade &amp; Eventos</a>
+      <button>Login Admin</button>
     </nav>
   </div>
 </header>
@@ -190,18 +245,19 @@
     <h2>Biodiversidade de Teresópolis</h2>
     <p>A região abriga uma das maiores diversidades de espécies da Mata Atlântica, com fauna e flora únicas que fazem de Teresópolis um verdadeiro santuário ecológico.</p>
     <div class="category-filters">
-      <button class="cat-btn active" data-filter="todos">Todos os Animais</button>
-      <button class="cat-btn" data-filter="ave">Aves</button>
-      <button class="cat-btn" data-filter="mamifero">Mamíferos</button>
-      <button class="cat-btn" data-filter="reptil">Répteis</button>
-      <button class="cat-btn" data-filter="anfibio">Anfibios</button>
-      <button class="cat-btn" data-filter="planta">Flora</button>
+      <button class="cat-btn active" data-filtro="todos">Todos os Animais</button>
+      <button class="cat-btn" data-filtro="ave">Aves</button>
+      <button class="cat-btn" data-filtro="mamifero">Mamíferos</button>
+      <button class="cat-btn" data-filtro="anfibio">Anfibios</button>
+      <button class="cat-btn" data-filtro="reptil">Répteis</button>
+      <button class="cat-btn" data-filtro="planta">Flora</button>
     </div>
   </div>
 
   <div class="cards-grid">
-    <!-- Ave — Bem-te-vi -->
-    <div class="bio-card" data-category="ave">
+
+    <!-- AVE 1 -->
+    <div class="bio-card" data-tipo="ave">
       <div class="card-header ave">
         <span class="card-tag">Ave</span>
         <span class="card-icon">🐦</span>
@@ -218,8 +274,8 @@
       </div>
     </div>
 
-    <!-- Ave — Tucano-de-bico-verde -->
-    <div class="bio-card" data-category="ave">
+    <!-- AVE 2 -->
+    <div class="bio-card" data-tipo="ave">
       <div class="card-header ave">
         <span class="card-tag">Ave</span>
         <span class="card-icon">🦜</span>
@@ -229,15 +285,15 @@
         <p>Espécie emblemática da Mata Atlântica, dispersor de sementes essencial para a floresta.</p>
         <ul class="card-meta">
           <li>📍 Mata Atlântica de altitude</li>
-          <li>📅 Permanente — avistamento: manhã/tarde</li>
+          <li>📅 Permanente — manhã e tarde</li>
           <li>⏰ Diurno</li>
         </ul>
         <a href="#" class="card-btn" style="background:#e67e22;">Ver Detalhes</a>
       </div>
     </div>
 
-    <!-- Mamífero — Sagui-da-serra -->
-    <div class="bio-card" data-category="mamifero">
+    <!-- MAMÍFERO -->
+    <div class="bio-card" data-tipo="mamifero">
       <div class="card-header mamifero">
         <span class="card-tag">Mamífero</span>
         <span class="card-icon">🐒</span>
@@ -254,8 +310,8 @@
       </div>
     </div>
 
-    <!-- Anfíbio — Perereca -->
-    <div class="bio-card" data-category="anfibio">
+    <!-- ANFÍBIO -->
+    <div class="bio-card" data-tipo="anfibio">
       <div class="card-header anfibio">
         <span class="card-tag">Anfíbio</span>
         <span class="card-icon">🐸</span>
@@ -272,8 +328,8 @@
       </div>
     </div>
 
-    <!-- Réptil -->
-    <div class="bio-card" data-category="reptil">
+    <!-- RÉPTIL -->
+    <div class="bio-card" data-tipo="reptil">
       <div class="card-header reptil">
         <span class="card-tag">Réptil</span>
         <span class="card-icon">🦎</span>
@@ -290,8 +346,8 @@
       </div>
     </div>
 
-    <!-- Flora -->
-    <div class="bio-card" data-category="planta">
+    <!-- FLORA -->
+    <div class="bio-card" data-tipo="planta">
       <div class="card-header planta">
         <span class="card-tag">Flora</span>
         <span class="card-icon">🌸</span>
@@ -307,6 +363,7 @@
         <a href="#" class="card-btn" style="background:#8e44ad;">Ver Detalhes</a>
       </div>
     </div>
+
   </div>
 
   <section class="events-section">
@@ -329,52 +386,37 @@
 
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div>© 2026 Circuito Terê Verde — Feito por Leandro Silva</div>
-    <div>Teresópolis — RJ</div>
-  </div>
+  <div>© 2026 Circuito Terê Verde — Feito por Leandro Silva</div>
+  <div>Teresópolis — RJ</div>
 </footer>
-<div id="loginModal" class="modal" aria-hidden="true">
-  <div class="modal-panel">
-    <button id="closeLogin" class="modal-close" aria-label="Fechar">&times;</button>
-    <h3>Acesso Administrativo</h3>
-    <p class="muted">Área restrita para atualização de eventos e dados.</p>
-    <input id="email" type="email" placeholder="Email" autocomplete="username">
-    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password">
-    <div class="modal-actions">
-      <button id="loginBtn" class="btn primary">Entrar</button>
-      <button id="cancelLogin" class="btn ghost">Cancelar</button>
-    </div>
-    <p id="loginMsg" class="erro"></p>
-  </div>
-</div>
 
 <script>
-// FILTROS FUNCIONANDO
-const botoes = document.querySelectorAll('.cat-btn');
-const cards = document.querySelectorAll('.bio-card');
+// FILTROS — funcionando garantido
+document.addEventListener('DOMContentLoaded', function() {
+  const botoes = document.querySelectorAll('.cat-btn');
+  const cards = document.querySelectorAll('.bio-card');
 
-botoes.forEach(botao => {
-  botao.addEventListener('click', () => {
-    // Marca botão ativo
-    botoes.forEach(b => b.classList.remove('active'));
-    botao.classList.add('active');
+  botoes.forEach(botao => {
+    botao.addEventListener('click', function() {
+      // Ativa botão clicado
+      botoes.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
 
-    const filtro = botao.getAttribute('data-filter');
+      const filtro = this.getAttribute('data-filtro');
 
-    // Mostra/esconde cards
-    cards.forEach(card => {
-      const categoria = card.getAttribute('data-category');
-      if (filtro === 'todos' || categoria === filtro) {
-        card.classList.remove('hidden');
-      } else {
-        card.classList.add('hidden');
-      }
+      // Mostra ou esconde cada card
+      cards.forEach(card => {
+        const tipo = card.getAttribute('data-tipo');
+        if (filtro === 'todos' || tipo === filtro) {
+          card.classList.remove('escondido');
+        } else {
+          card.classList.add('escondido');
+        }
+      });
     });
   });
 });
 </script>
 
-<script src="js/main.js"></script>
 </body>
 </html>
