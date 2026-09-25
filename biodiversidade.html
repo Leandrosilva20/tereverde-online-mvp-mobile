@@ -1,70 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Biodiversidade &amp; Eventos - Circuito Terê Verde</title>
-<link rel="stylesheet" href="css/style.css" />
-<script defer src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodiversidade & Trilhas — Circuito Terê Verde</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      color: #1a1a1a;
+      background-color: #f8faf8;
+    }
+    h1, h2, h3 {
+      color: #205c35;
+    }
+    .trilha {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    a {
+      color: #207542;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <div class="brand">
-      <h1>Circuito Terê Verde</h1>
-      <p class="subtitle">Teresópolis — Ecoturismo &amp; Biodiversidade</p>
-    </div>
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Início</a>
-      <a href="trilhas.html" class="nav-link">Trilhas</a>
-      <a href="biodiversidade.html" class="nav-link ativo">Biodiversidade &amp; Eventos</a>
-      <button id="openLogin" class="btn login-btn">Login Admin</button>
-    </nav>
-  </div>
-</header>
 
-<main class="container">
-  <section class="section">
-    <h3>Biodiversidade da região</h3>
-    <div class="cards">
-      <article class="card">
-        <h4>Mata Atlântica</h4>
-        <p>Um dos biomas mais ameaçados do país, com alta diversidade de espécies endêmicas.</p>
-      </article>
-      <article class="card">
-        <h4>Avifauna</h4>
-        <p>Região com registros frequentes de aves de montanha, boa para observação.</p>
-      </article>
-      <article class="card">
-        <h4>Fauna de altitude</h4>
-        <p>Espécies adaptadas aos costões rochosos e campos de altitude do Três Picos.</p>
-      </article>
-    </div>
-  </section>
+<h1>Circuito Terê Verde</h1>
+<p>Teresópolis — Ecoturismo, Biodiversidade & Aventura</p>
 
-  <section class="section">
-    <h3>Próximos eventos</h3>
-    <p class="muted">Disponibilidade e horários são atualizados pela administração.</p>
-    <div id="listaEventos"></div>
-  </section>
-</main>
+<h2>Trilhas e Travessias da Região</h2>
 
-<footer class="site-footer">
-  <div class="container">© 2026 Circuito Terê Verde — Projeto acadêmico</div>
-</footer>
-
-<div id="loginModal" class="modal" aria-hidden="true">
-  <div class="modal-panel">
-    <button id="closeLogin" class="modal-close" aria-label="Fechar">&times;</button>
-    <h3>Acesso Administrativo</h3>
-    <input id="email" type="email" placeholder="Email" autocomplete="username" />
-    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password" />
-    <div class="modal-actions">
-      <button id="loginBtn" class="btn primary">Entrar</button>
-      <button id="cancelLogin" class="btn ghost">Cancelar</button>
-    </div>
-    <p id="loginMsg" class="erro"></p>
-  </div>
+<div class="trilha">
+  <h3>1 — Travessia Petrópolis × Teresópolis</h3>
+  <p>Simplesmente considerada a travessia mais bonita do Brasil, normalmente é feita em 3 dias e conta com magníficas paisagens, passando por pontos icônicos como o Morro do Açu, a Pedra do Sino e os Portais de Hércules.</p>
+  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank">Saiba mais →</a></p>
 </div>
+
+<div class="trilha">
+  <h3>2 — Travessia Vale dos Deuses × Vale dos Frades</h3>
+  <p>Uma das trilhas mais bonitas da região, pois passa por dois vales cercados por altas montanhas. Realizada em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como a Caixa de Fósforos e a Cabeça de Dragão.</p>
+  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank">Saiba mais →</a></p>
+</div>
+
+<div class="trilha">
+  <h3>3 — Pedra do Sino</h3>
+  <p>Ponto mais alto da Serra dos Órgãos, parte da Travessia Petrópolis × Teresópolis. É uma das trilhas mais tradicionais da cidade; apesar da distância, não apresenta grandes dificuldades técnicas. Recomenda-se fazer em 2 dias e contemplar o nascer do sol.</p>
+  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank">Saiba mais →</a></p>
+</div>
+
+<div class="trilha">
+  <h3>4 — Dois Bicos + Cachoeira dos Frades</h3>
+  <p>Trilha de 1 dia, nível moderado, localizada no Vale dos Frades. O percurso passa por dentro de uma fazenda até o cume, com visual estonteante. No retorno, parada para banho nas águas geladas da Cachoeira dos Frades.</p>
+  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank">Saiba mais →</a></p>
+</div>
+
+<div class="trilha">
+  <h3>5 — Mirante do Inferno / Agulha do Diabo</h3>
+  <p>Trilha feita em 1 dia, de nível pesado, que segue parte do trajeto da Pedra do Sino. O destino final é um dos mirantes mais belos do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.</p>
+  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank">Saiba mais →</a></p>
+</div>
+
+<h2>Biodiversidade da Região</h2>
+<ul>
+  <li><strong>Mata Atlântica:</strong> Um dos biomas mais ameaçados do país, com alta diversidade de espécies endêmicas.</li>
+  <li><strong>Avifauna:</strong> Região com registros frequentes de aves de montanha, excelente para observação.</li>
+  <li><strong>Fauna de altitude:</strong> Espécies adaptadas aos costões rochosos e campos de altitude do Parque Estadual dos Três Picos e do PARNASO.</li>
+</ul>
+
+<h2>Próximos Eventos</h2>
+<ul>
+  <li><strong>Mutirão de Limpeza de Trilhas</strong> — Parque Natural Municipal · 04/10/2026 · 8h às 12h</li>
+  <li><strong>Caminhada Guiada de Observação de Aves</strong> — PARNASO · 18/10/2026 · 6h30 (vagas esgotadas)</li>
+</ul>
+
 </body>
 </html>
