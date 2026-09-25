@@ -1,69 +1,95 @@
-# 🌿 Circuito Terê Verde — versão corrigida
+# 🌿 Circuito Terê Verde
 
-MVP web (HTML/CSS/JS) para divulgar trilhas, biodiversidade e eventos das
-unidades de conservação de Teresópolis (PARNASO, Parque Estadual dos Três
-Picos e Parque Natural Municipal Montanhas de Teresópolis).
+> **Ecoturismo & Biodiversidade em Teresópolis – RJ**
 
-## O que foi corrigido em relação à versão anterior
+Site informativo e de visitação sobre as riquezas naturais de Teresópolis, apresentando trilhas, parques e ações de educação ambiental.
 
-Com base na verificação contra as exigências da Situação-Problema #1:
+---
 
-1. **Segurança de dados (era o principal problema).**
-   O modal de login antes mostrava a senha de demonstração em texto visível
-   na própria tela (`admin@tere.com` / `senha123`). Isso foi removido. O
-   login continua sendo apenas uma simulação em JavaScript no navegador —
-   **isso é uma limitação conhecida de qualquer MVP sem backend**, e agora
-   está sinalizada de forma explícita tanto na tela de login quanto dentro
-   do painel administrativo, em vez de parecer resolvida. Para um sistema
-   real, seria necessário um backend com autenticação (ex.: hash de senha,
-   tokens de sessão, HTTPS).
+## 📋 Sobre o Projeto
 
-2. **Gestão de disponibilidade.**
-   Antes, o painel só tinha nome/dificuldade/distância (trilhas) e
-   título/data/local (eventos) — sem status. Agora cada trilha e evento tem
-   um campo de **Disponibilidade** (Disponível / Em manutenção / Fechada /
-   Lotado / Cancelado) e um campo de **Horário de funcionamento**, editáveis
-   pelo administrador e exibidos automaticamente nas páginas públicas
-   (`trilhas.html` e `biodiversidade.html`).
+O **Circuito Terê Verde** é uma plataforma digital que reúne informações sobre as unidades de conservação, trilhas e atrativos naturais de Teresópolis, na Região Serrana do Rio de Janeiro. Nosso objetivo é promover o turismo sustentável, a educação ambiental e a valorização da biodiversidade local.
 
-3. **Duplicidade admin.html / painel.html.**
-   Os dois arquivos faziam a mesma coisa. Foram unificados em um único
-   `admin.html`, evitando confusão sobre qual é a área administrativa
-   oficial.
+### 🎯 Objetivos
+- Divulgar trilhas e percursos autorizados e seguros
+- Apresentar os parques e reservas da região
+- Incentivar práticas de visitação responsável
+- Facilitar o planejamento da sua visita
 
-4. **Login para administradores.**
-   Mantido como pedido no desafio (botão "Login Admin"), mas agora o
-   `admin.html` verifica a sessão e redireciona para a página inicial se
-   não houver login ativo — antes, a página administrativa era acessível
-   diretamente pela URL, sem qualquer checagem.
+---
 
-## Estrutura
-
-```
-tereverde/
-├── css/style.css
-├── js/main.js          # login (demo), CRUD, renderização das listas
-├── images/hero.svg
-├── index.html
-├── trilhas.html
-├── biodiversidade.html
-├── admin.html
+## 📂 Estrutura do Projeto
+tereverde-online-mvp-mobile/
+├── index.html # Página inicial
+├── trilhas.html # Página de trilhas e percursos
+├── biodiversidade.html # Flora, fauna e eventos
+├── admin.html # Painel administrativo
+├── css/ # Estilos visuais
+├── js/ # Comportamentos e interatividade
+├── images/ # Imagens e recursos visuais
+│ ├── dedo-de-deus.jpg # Banner principal — Dedo de Deus
+│ ├── biodversidade.PNG
+│ ├── inicio.PNG
+│ └── trilha.PNG
 └── README.md
-```
 
-## Como usar
+---
 
-Basta abrir `index.html` no navegador — não há dependências. Os dados de
-trilhas/eventos ficam salvos no `localStorage` do navegador (dá pra editar
-pelo painel e recarregar a página que os dados continuam lá).
+## 🏞️ Parques em Destaque
 
-Para testar o login: qualquer email válido + senha com 4+ caracteres entra
-no painel (é só uma simulação, como explicado acima).
+| Parque | Descrição |
+|---|---|
+| **Parque Nacional da Serra dos Órgãos** | Montanhas, cânions e trilhas clássicas, incluindo a Pedra do Sino |
+| **Parque Estadual dos Três Picos** | Picos íngremes e biodiversidade rica — maior unidade de conservação do estado |
+| **Parque Natural Municipal Montanhas de Teresópolis** | Trilhas curtas, mirantes locais e educação ambiental |
 
-## Próximos passos sugeridos (fora do escopo deste MVP)
+---
 
-- Backend real (Node/Express, Firebase, etc.) com autenticação segura.
-- Banco de dados em vez de `localStorage`, para os dados persistirem entre
-  dispositivos/navegadores.
-- Testes de carga para validar o requisito de desempenho com muitos
-  usuários simultâneos.
+## 🚀 Como Acessar
+
+1. Visite: **https://leandrosilva20.github.io/tereverde-online-mvp-mobile/**
+2. Navegue entre as seções:
+   - **Início** — Apresentação e destaques
+   - **Trilhas** — Percursos, níveis de dificuldade e duração
+   - **Biodiversidade** — Espécies, fauna, flora e eventos
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML5** — Estrutura e semântica
+- **CSS3** — Estilos responsivos e design
+- **JavaScript** — Interatividade e funcionalidades
+- **GitHub Pages** — Hospedagem e publicação
+
+---
+
+## 📸 Símbolo da Região
+
+> **Dedo de Deus** — Cartão postal de Teresópolis e um dos principais ícones da Serra dos Órgãos.
+
+---
+
+## 🌱 Práticas de Visitação Responsável
+
+- ✅ Respeite as sinalizações e percursos autorizados
+- ✅ Leve sua água e recipientes reutilizáveis
+- ✅ Não deixe lixo nos caminhos
+- ✅ Preserve a fauna e flora — não toque nem alimente animais
+- ✅ Mantenha distância segura de bordas e penhascos
+
+---
+
+## 📌 Status do Projeto
+
+- ✅ MVP concluído e publicado
+- 🔄 Em desenvolvimento — novas funcionalidades em breve
+
+---
+
+## 👤 Créditos
+
+**Feito por Leandro Silva**  
+© 2026 Circuito Terê Verde — Todos os direitos reservados.
+
+💚 Teresópolis – Rio de Janeiro
