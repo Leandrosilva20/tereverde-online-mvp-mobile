@@ -130,7 +130,7 @@ body {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
 }
 .trilha-card.escondida {
@@ -138,16 +138,18 @@ body {
 }
 .trilha-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 .trilha-imagem {
   width: 100%;
   height: 180px;
   object-fit: cover;
+  display: block;
 }
 .trilha-nivel {
-  padding: 0.5rem 1.25rem;
+  padding: 0.6rem 1.25rem;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 0.85rem;
 }
 .trilha-nivel.facil {
