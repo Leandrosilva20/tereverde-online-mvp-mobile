@@ -5,24 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Biodiversidade & Trilhas — Circuito Terê Verde</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.7;
+      max-width: 960px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
-      color: #1a1a1a;
+      color: #1f2937;
       background-color: #f8faf8;
     }
-    h1, h2, h3 {
+    header {
+      margin-bottom: 2.5rem;
+      border-bottom: 2px solid #205c35;
+      padding-bottom: 1rem;
+    }
+    h1 {
       color: #205c35;
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
+    }
+    .subtitulo {
+      color: #4b5563;
+      font-size: 1rem;
+    }
+    h2 {
+      color: #205c35;
+      margin: 2rem 0 1rem;
+      font-size: 1.35rem;
     }
     .trilha {
       background: #ffffff;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border-left: 4px solid #205c35;
+      border-radius: 0 10px 10px 0;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 8px rgba(32, 92, 53, 0.08);
+      transition: transform 0.2s ease;
+    }
+    .trilha:hover {
+      transform: translateX(4px);
+    }
+    .trilha h3 {
+      color: #1a472a;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .trilha p {
+      margin-bottom: 0.7rem;
+      color: #374151;
     }
     a {
       color: #207542;
@@ -32,57 +67,79 @@
     a:hover {
       text-decoration: underline;
     }
+    ul {
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+    }
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #d1d5db;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
 
-<h1>Circuito Terê Verde</h1>
-<p>Teresópolis — Ecoturismo, Biodiversidade & Aventura</p>
+<header>
+  <h1>Circuito Terê Verde</h1>
+  <p class="subtitulo">Teresópolis — Ecoturismo, Biodiversidade & Aventura</p>
+</header>
 
-<h2>Trilhas e Travessias da Região</h2>
+<main>
+  <h2>Trilhas e Travessias da Região</h2>
 
-<div class="trilha">
-  <h3>1 — Travessia Petrópolis × Teresópolis</h3>
-  <p>Simplesmente considerada a travessia mais bonita do Brasil, normalmente é feita em 3 dias e conta com magníficas paisagens, passando por pontos icônicos como o Morro do Açu, a Pedra do Sino e os Portais de Hércules.</p>
-  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank">Saiba mais →</a></p>
-</div>
+  <div class="trilha">
+    <h3>1 — Travessia Petrópolis × Teresópolis</h3>
+    <p>Considerada a travessia mais bonita do Brasil, realizada em 3 dias com paisagens magníficas. Percorre o coração da Serra dos Órgãos, passando pelo Morro do Açu, Portais de Hércules e a Pedra do Sino (2.275 m).</p>
+    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank">Ver detalhes e reservar →</a></p>
+  </div>
 
-<div class="trilha">
-  <h3>2 — Travessia Vale dos Deuses × Vale dos Frades</h3>
-  <p>Uma das trilhas mais bonitas da região, pois passa por dois vales cercados por altas montanhas. Realizada em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como a Caixa de Fósforos e a Cabeça de Dragão.</p>
-  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank">Saiba mais →</a></p>
-</div>
+  <div class="trilha">
+    <h3>2 — Travessia Vale dos Deuses × Vale dos Frades</h3>
+    <p>Uma das mais belas da região, cercada por montanhas imponentes. Feita em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como Caixa de Fósforos e Cabeça de Dragão.</p>
+    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank">Ver detalhes e reservar →</a></p>
+  </div>
 
-<div class="trilha">
-  <h3>3 — Pedra do Sino</h3>
-  <p>Ponto mais alto da Serra dos Órgãos, parte da Travessia Petrópolis × Teresópolis. É uma das trilhas mais tradicionais da cidade; apesar da distância, não apresenta grandes dificuldades técnicas. Recomenda-se fazer em 2 dias e contemplar o nascer do sol.</p>
-  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank">Saiba mais →</a></p>
-</div>
+  <div class="trilha">
+    <h3>3 — Pedra do Sino</h3>
+    <p>Ponto mais alto da Serra dos Órgãos. Trilha tradicional, sem grandes dificuldades técnicas apesar da distância. Recomendada em 2 dias para apreciar o nascer do sol no cume.</p>
+    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank">Ver detalhes e reservar →</a></p>
+  </div>
 
-<div class="trilha">
-  <h3>4 — Dois Bicos + Cachoeira dos Frades</h3>
-  <p>Trilha de 1 dia, nível moderado, localizada no Vale dos Frades. O percurso passa por dentro de uma fazenda até o cume, com visual estonteante. No retorno, parada para banho nas águas geladas da Cachoeira dos Frades.</p>
-  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank">Saiba mais →</a></p>
-</div>
+  <div class="trilha">
+    <h3>4 — Dois Bicos + Cachoeira dos Frades</h3>
+    <p>Trilha de 1 dia, nível moderado, no Vale dos Frades. Percorre áreas de fazenda até o cume com vista deslumbrante. No retorno, banho nas águas cristalinas da Cachoeira dos Frades.</p>
+    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank">Ver detalhes e reservar →</a></p>
+  </div>
 
-<div class="trilha">
-  <h3>5 — Mirante do Inferno / Agulha do Diabo</h3>
-  <p>Trilha feita em 1 dia, de nível pesado, que segue parte do trajeto da Pedra do Sino. O destino final é um dos mirantes mais belos do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.</p>
-  <p><a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank">Saiba mais →</a></p>
-</div>
+  <div class="trilha">
+    <h3>5 — Mirante do Inferno / Agulha do Diabo</h3>
+    <p>Trilha de 1 dia, nível pesado, seguindo trecho da Pedra do Sino. O destino é um dos mais belos mirantes do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.</p>
+    <p><a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank">Ver detalhes e reservar →</a></p>
+  </div>
 
-<h2>Biodiversidade da Região</h2>
-<ul>
-  <li><strong>Mata Atlântica:</strong> Um dos biomas mais ameaçados do país, com alta diversidade de espécies endêmicas.</li>
-  <li><strong>Avifauna:</strong> Região com registros frequentes de aves de montanha, excelente para observação.</li>
-  <li><strong>Fauna de altitude:</strong> Espécies adaptadas aos costões rochosos e campos de altitude do Parque Estadual dos Três Picos e do PARNASO.</li>
-</ul>
+  <h2>Biodiversidade da Região</h2>
+  <ul>
+    <li><strong>Mata Atlântica:</strong> Um dos biomas mais ricos e ameaçados do país, com enorme diversidade de espécies endêmicas.</li>
+    <li><strong>Avifauna:</strong> Região privilegiada para observação de aves de altitude.</li>
+    <li><strong>Fauna de altitude:</strong> Espécies adaptadas aos campos de altitude e formações rochosas do PARNASO e do Parque dos Três Picos.</li>
+  </ul>
 
-<h2>Próximos Eventos</h2>
-<ul>
-  <li><strong>Mutirão de Limpeza de Trilhas</strong> — Parque Natural Municipal · 04/10/2026 · 8h às 12h</li>
-  <li><strong>Caminhada Guiada de Observação de Aves</strong> — PARNASO · 18/10/2026 · 6h30 (vagas esgotadas)</li>
-</ul>
+  <h2>Próximos Eventos</h2>
+  <ul>
+    <li><strong>Mutirão de Limpeza de Trilhas</strong> — 04/10/2026 · 8h às 12h · Parque Natural Municipal</li>
+    <li><strong>Caminhada Guiada de Observação de Aves</strong> — 18/10/2026 · 6h30 · PARNASO (vagas esgotadas)</li>
+  </ul>
+</main>
+
+<footer>
+  © 2026 Circuito Terê Verde — Projeto acadêmico
+</footer>
 
 </body>
 </html>
