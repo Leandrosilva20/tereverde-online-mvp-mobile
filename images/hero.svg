@@ -1,17 +1,9 @@
-<svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e7e9de"/>
-      <stop offset="100%" stop-color="#f2f3ec"/>
-    </linearGradient>
-  </defs>
-  <rect width="480" height="380" fill="url(#sky)"/>
-  <circle cx="380" cy="70" r="36" fill="#a8582c" opacity="0.85"/>
-  <polygon points="0,260 90,150 170,230 260,120 360,220 480,160 480,380 0,380" fill="#8fae9b" opacity="0.55"/>
-  <polygon points="0,300 110,190 220,270 310,170 420,260 480,220 480,380 0,380" fill="#3f7a5d" opacity="0.8"/>
-  <polygon points="0,340 130,240 250,320 340,230 480,300 480,380 0,380" fill="#1b3a2b"/>
-  <g stroke="#f2f3ec" stroke-width="1.5" opacity="0.35" fill="none">
-    <path d="M60,320 Q140,290 220,320 T400,310"/>
-    <path d="M40,345 Q150,320 260,345 T460,335"/>
-  </g>
-</svg>
+<div class="hero-image">
+  <img 
+    src="images/dedo-de-deus.jpg"
+    alt="Dedo de Deus — Serra dos Órgãos, Teresópolis"
+    style="width: 100%; height: auto; border-radius: 8px;">
+  <p style="text-align:center; font-size:0.85rem; color:#555; margin-top:0.5rem; font-style:italic;">
+    Dedo de Deus — Cartão postal de Teresópolis
+  </p>
+</div>
