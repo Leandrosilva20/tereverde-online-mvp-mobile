@@ -1,115 +1,90 @@
 # Circuito Terê Verde
 
-Ecoturismo & Biodiversidade em Teresópolis – RJ
+Teresópolis - Ecoturismo, Biodiversidade e Aventura
 
-Site informativo e de visitação sobre as riquezas naturais de Teresópolis, apresentando trilhas, parques e ações de educação ambiental.
-
----
-
-## Sobre o Projeto
-
-O Circuito Terê Verde é uma plataforma digital que reúne informações sobre as unidades de conservação, trilhas e atrativos naturais de Teresópolis, na Região Serrana do Rio de Janeiro. Nosso objetivo é promover o turismo sustentável, a educação ambiental e a valorização da biodiversidade local.
-
-### Objetivos
-- Divulgar trilhas e percursos autorizados e seguros
-- Apresentar os parques e reservas da região
-- Incentivar práticas de visitação responsável
-- Facilitar o planejamento da sua visita
+Site informativo sobre a biodiversidade, trilhas e eventos ecológicos de Teresópolis - RJ.
 
 ---
 
 ## Estrutura do Projeto
 
-tereverde-online-mvp-mobile/
-
-├── index.html # Página inicial
-
-├── trilhas.html # Página de trilhas e percursos
-
-├── biodiversidade.html # Flora, fauna e eventos
-
-├── admin.html # Painel administrativo
-
-├── painel.html # Painel de controle
-
-├── css/ # Estilos visuais
-
-├── js/ # Comportamentos e interatividade
-
-├── images/ # Imagens e recursos visuais
-
-│ ├── dedo-de-deus.jpg # Banner principal — Dedo de Deus
-
-│ ├── biodversidade.PNG
-
-│ ├── inicio.PNG
-
-│ └── trilha.PNG
-
-├── floresta.svg # Ilustração da página inicial
-
-└── README.md
-
-plaintext
+circuito-tereverde/
+├── index.html                  - Página Inicial
+├── trilhas.html                - Página de Trilhas
+├── biodiversidade.html         - Página de Biodiversidade e Eventos
+│
+├── detalhes-bem-te-vi.html     - Página de detalhes: Bem-te-vi
+├── detalhes-tucano.html        - Página de detalhes: Tucano-de-bico-verde
+├── detalhes-sagui.html         - Página de detalhes: Sagui-da-serra
+├── detalhes-perereca.html      - Página de detalhes: Perereca-da-Serra
+├── detalhes-lagartixa.html     - Página de detalhes: Lagartixa-da-Serra
+├── detalhes-orquidea.html      - Página de detalhes: Orquídea da Serra
+│
+├── admin.html                  - Painel de Administração
+├── painel.html                 - Painel de Controle
+│
+├── css/                        - Arquivos de estilo
+├── js/                         - Scripts e interatividade
+├── images/                     - Imagens e mídia
+└── README.md                   - Este arquivo
 
 ---
 
-## Parques em Destaque
+## Funcionalidades
 
-| Parque | Descrição |
-|---|---|
-| Parque Nacional da Serra dos Órgãos | Montanhas, cânions e trilhas clássicas, incluindo a Pedra do Sino |
-| Parque Estadual dos Três Picos | Picos íngremes e biodiversidade rica — maior unidade de conservação do estado |
-| Parque Natural Municipal Montanhas de Teresópolis | Trilhas curtas, mirantes locais e educação ambiental |
+### Biodiversidade
+- Filtros por categoria: Todos, Aves, Mamíferos, Anfíbios, Répteis, Flora
+- 6 espécies cadastradas:
+  - Bem-te-vi
+  - Tucano-de-bico-verde
+  - Sagui-da-serra
+  - Perereca-da-Serra
+  - Lagartixa-da-Serra
+  - Orquídea da Serra
+- Cada espécie tem página de detalhes com:
+  - Características da espécie
+  - Habitat e localização em Teresópolis
+  - Horário de avistamento
+  - Status de conservação
+  - Curiosidades
+- Seção de Eventos com próximas atividades
 
----
+### Trilhas
+- Informações sobre percursos
+- Dificuldade, duração e distância
 
-## Como Acessar
-
-1. Visite: https://leandrosilva20.github.io/tereverde-online-mvp-mobile/
-2. Navegue entre as seções:
-   - Início — Apresentação e destaques
-   - Trilhas — Percursos, níveis de dificuldade e duração
-   - Biodiversidade — Espécies, fauna, flora e eventos
-
----
-
-## Tecnologias Utilizadas
-
-- HTML5 — Estrutura e semântica
-- CSS3 — Estilos responsivos e design
-- JavaScript — Interatividade e funcionalidades
-- GitHub Pages — Hospedagem e publicação
-
----
-
-## Símbolo da Região
-
-Dedo de Deus — Cartão postal de Teresópolis e um dos principais ícones da Serra dos Órgãos.
+### Administração
+- Páginas de controle para gestão de conteúdo
 
 ---
 
-## Práticas de Visitação Responsável
+## Como Usar
 
-- Respeite as sinalizações e percursos autorizados
-- Leve sua água e recipientes reutilizáveis
-- Não deixe lixo nos caminhos
-- Preserve a fauna e flora — não toque nem alimente animais
-- Mantenha distância segura de bordas e penhascos
-
----
-
-## Status do Projeto
-
-- MVP concluído e publicado
-- Em desenvolvimento — novas funcionalidades em breve
+1. Abra index.html no navegador
+2. Navegue pelo menu:
+   - Início - Apresentação do projeto
+   - Trilhas - Percursos disponíveis
+   - Biodiversidade - Fauna e flora local e Eventos
+3. Na página de Biodiversidade:
+   - Clique nos botões de filtro para filtrar por categoria
+   - Clique em Ver Detalhes para abrir a página completa da espécie
+   - Clique em Voltar para retornar à lista
 
 ---
 
-## Créditos
+## Tecnologias
+- HTML5
+- CSS3
+- JavaScript
+- Responsivo - Funciona em celular e computador
 
-Feito por Leandro Silva
+---
 
-© 2026 Circuito Terê Verde — Todos os direitos reservados.
+## Sobre Teresópolis
+Localizada na Serra do Mar, abriga parte do Parque Nacional da Serra dos Órgãos (PARNASO) e do Parque Estadual dos Três Picos, com uma das maiores biodiversidades da Mata Atlântica.
 
-Teresópolis – Rio de Janeiro
+---
+
+## Autor
+Feito por Leandro Silva - Circuito Terê Verde
+© 2026 Todos os direitos reservados
