@@ -42,7 +42,7 @@
   .filter-btn.hard { background: #e74c3c; color: white; }
   .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
   }
   .trail-card {
@@ -50,48 +50,49 @@
     overflow: hidden;
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     transition: transform 0.2s;
+    background: white;
   }
   .trail-card:hover {
     transform: translateY(-4px);
   }
-  .card-header {
-    padding: 1.5rem;
-    color: white;
+  .card-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .photo-container {
     position: relative;
   }
   .difficulty-tag {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background: rgba(0,0,0,0.25);
+    top: 0.75rem;
+    left: 0.75rem;
+    background: rgba(0,0,0,0.55);
+    color: white;
     padding: 0.25rem 0.6rem;
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: bold;
   }
-  .card-icon {
-    font-size: 2.5rem;
-    margin: 1rem 0;
-    opacity: 0.85;
-  }
-  .card-header h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-  }
-  .card-header p {
-    font-size: 0.85rem;
-    opacity: 0.9;
-    line-height: 1.4;
-  }
   .card-body {
-    padding: 1rem 1.25rem;
-    background: white;
+    padding: 1.25rem;
+  }
+  .card-body h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+  }
+  .card-body p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
   }
   .card-meta {
     list-style: none;
     padding: 0;
     margin-bottom: 1rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #555;
   }
   .card-meta li {
@@ -111,23 +112,17 @@
     display: inline-block;
     text-align: center;
     font-size: 0.9rem;
+    color: white;
   }
   .card-btn:hover {
     opacity: 0.9;
   }
-  /* Cores dos cards */
-  .card-pedra { background: linear-gradient(135deg, #e74c3c, #f39c12); }
-  .card-dedo  { background: linear-gradient(135deg, #9b59b6, #3498db); }
-  .card-frades{ background: linear-gradient(135deg, #3498db, #1abc9c); }
-  .card-btn-pedra { background: #e74c3c; color: white; }
-  .card-btn-dedo  { background: #9b59b6; color: white; }
-  .card-btn-frades{ background: #3498db; color: white; }
-  .card-vale     { background: linear-gradient(135deg, #27ae60, #2ecc71); }
-  .card-btn-vale { background: #27ae60; color: white; }
-  .card-travessia{ background: linear-gradient(135deg, #f39c12, #e67e22); }
-  .card-btn-travessia { background: #f39c12; color: white; }
-  .card-agulha   { background: linear-gradient(135deg, #16a085, #1abc9c); }
-  .card-btn-agulha { background: #16a085; color: white; }
+  /* Cores dos botões */
+  .btn-pedra { background: #e74c3c; }
+  .btn-travessia { background: #f39c12; }
+  .btn-vale { background: #27ae60; }
+  .btn-frades { background: #3498db; }
+  .btn-agulha { background: #16a085; }
 </style>
 </head>
 <body>
@@ -163,91 +158,91 @@
 
     <!-- 1 — Pedra do Sino -->
     <div class="trail-card">
-      <div class="card-header card-pedra">
+      <div class="photo-container">
+        <img src="images/dedo-de-deus.jpg" alt="Pedra do Sino" class="card-photo">
         <span class="difficulty-tag">Difícil</span>
-        <div class="card-icon">⛰️</div>
-        <h3>Pedra do Sino</h3>
-        <p>Ponto mais alto da Serra dos Órgãos. Trilha tradicional com paisagens deslumbrantes.</p>
       </div>
       <div class="card-body">
+        <h3>Pedra do Sino</h3>
+        <p>Ponto mais alto da Serra dos Órgãos. Trilha tradicional com paisagens deslumbrantes.</p>
         <ul class="card-meta">
           <li>📏 12 km (ida e volta)</li>
           <li>⏱️ 2 dias de caminhada</li>
           <li>📍 2.275 m de altitude</li>
         </ul>
-        <a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank" class="card-btn card-btn-pedra">Ver Detalhes</a>
+        <a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank" class="card-btn btn-pedra">Ver Detalhes</a>
       </div>
     </div>
 
     <!-- 2 — Travessia Petrópolis × Teresópolis -->
     <div class="trail-card">
-      <div class="card-header card-travessia">
+      <div class="photo-container">
+        <img src="images/inicio.PNG" alt="Travessia Petrópolis × Teresópolis" class="card-photo">
         <span class="difficulty-tag">Difícil</span>
-        <div class="card-icon">🏔️</div>
-        <h3>Travessia Petrópolis × Teresópolis</h3>
-        <p>Considerada a travessia mais bonita do Brasil, percorre o coração da Serra dos Órgãos.</p>
       </div>
       <div class="card-body">
+        <h3>Travessia Petrópolis × Teresópolis</h3>
+        <p>Considerada a travessia mais bonita do Brasil, percorre o coração da Serra dos Órgãos.</p>
         <ul class="card-meta">
           <li>📏 Percurso completo</li>
           <li>⏱️ 3 dias de travessia</li>
           <li>📍 Morro do Açu · Pedra do Sino</li>
         </ul>
-        <a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank" class="card-btn card-btn-travessia">Ver Detalhes</a>
+        <a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank" class="card-btn btn-travessia">Ver Detalhes</a>
       </div>
     </div>
 
     <!-- 3 — Vale dos Deuses × Vale dos Frades -->
     <div class="trail-card">
-      <div class="card-header card-vale">
+      <div class="photo-container">
+        <img src="images/biodversidade.PNG" alt="Vale dos Deuses" class="card-photo">
         <span class="difficulty-tag">Moderada</span>
-        <div class="card-icon">🌿</div>
-        <h3>Vale dos Deuses × Vale dos Frades</h3>
-        <p>Montanhas imponentes, acampamento e cumes como Caixa de Fósforos e Cabeça de Dragão.</p>
       </div>
       <div class="card-body">
+        <h3>Vale dos Deuses × Vale dos Frades</h3>
+        <p>Montanhas imponentes, acampamento e cumes como Caixa de Fósforos e Cabeça de Dragão.</p>
         <ul class="card-meta">
           <li>📏 Percurso de travessia</li>
           <li>⏱️ 2 dias de caminhada</li>
           <li>📍 Vale dos Deuses · Vale dos Frades</li>
         </ul>
-        <a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank" class="card-btn card-btn-vale">Ver Detalhes</a>
+        <a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank" class="card-btn btn-vale">Ver Detalhes</a>
       </div>
     </div>
 
     <!-- 4 — Dois Bicos + Cachoeira dos Frades -->
     <div class="trail-card">
-      <div class="card-header card-frades">
+      <div class="photo-container">
+        <img src="images/trilha.PNG" alt="Dois Bicos e Cachoeira dos Frades" class="card-photo">
         <span class="difficulty-tag">Moderada</span>
-        <div class="card-icon">💧</div>
-        <h3>Dois Bicos + Cachoeira dos Frades</h3>
-        <p>Trilha de 1 dia com vista deslumbrante e banho nas águas cristalinas da cachoeira.</p>
       </div>
       <div class="card-body">
+        <h3>Dois Bicos + Cachoeira dos Frades</h3>
+        <p>Trilha de 1 dia com vista deslumbrante e banho nas águas cristalinas da cachoeira.</p>
         <ul class="card-meta">
           <li>📏 Percurso de 1 dia</li>
           <li>⏱️ Nível moderado</li>
           <li>📍 Vale dos Frades</li>
         </ul>
-        <a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank" class="card-btn card-btn-frades">Ver Detalhes</a>
+        <a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank" class="card-btn btn-frades">Ver Detalhes</a>
       </div>
     </div>
 
     <!-- 5 — Mirante do Inferno / Agulha do Diabo -->
     <div class="trail-card">
-      <div class="card-header card-agulha">
+      <div class="photo-container">
+        <img src="images/dedo-de-deus.jpg" alt="Agulha do Diabo" class="card-photo">
         <span class="difficulty-tag">Difícil</span>
-        <div class="card-icon">🗻</div>
-        <h3>Agulha do Diabo</h3>
-        <p>Um dos mais belos mirantes do PARNASO, de frente para uma das montanhas mais bonitas do mundo.</p>
       </div>
       <div class="card-body">
+        <h3>Agulha do Diabo</h3>
+        <p>Um dos mais belos mirantes do PARNASO, de frente para uma das montanhas mais bonitas do mundo.</p>
         <ul class="card-meta">
           <li>📏 Trecho da Pedra do Sino</li>
           <li>⏱️ 1 dia · nível pesado</li>
           <li>📍 Mirante do Inferno</li>
         </ul>
-        <a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank" class="card-btn card-btn-agulha">Ver Detalhes</a>
+        <a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank" class="card-btn btn-agulha">Ver Detalhes</a>
       </div>
     </div>
 
