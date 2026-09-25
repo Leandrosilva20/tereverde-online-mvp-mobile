@@ -39,9 +39,19 @@
     border-radius: 20px;
     font-size: 0.8rem;
     cursor: pointer;
+    transition: all 0.2s;
   }
-  .cat-btn.active { background: #27ae60; color: white; }
-  .cat-btn:not(.active) { background: #e8e8e8; color: #444; }
+  .cat-btn.active { 
+    background: #27ae60; 
+    color: white; 
+  }
+  .cat-btn:not(.active) { 
+    background: #e8e8e8; 
+    color: #444; 
+  }
+  .cat-btn:not(.active):hover {
+    background: #d5d5d5;
+  }
 
   .cards-grid {
     display: grid;
@@ -53,7 +63,10 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+  }
+  .bio-card.hidden {
+    display: none;
   }
   .bio-card:hover {
     transform: translateY(-4px);
@@ -102,6 +115,8 @@
     font-size: 0.75rem;
     color: #555;
     margin-bottom: 0.75rem;
+    list-style: none;
+    padding: 0;
   }
   .card-meta li {
     display: flex;
@@ -175,17 +190,18 @@
     <h2>Biodiversidade de Teresópolis</h2>
     <p>A região abriga uma das maiores diversidades de espécies da Mata Atlântica, com fauna e flora únicas que fazem de Teresópolis um verdadeiro santuário ecológico.</p>
     <div class="category-filters">
-      <button class="cat-btn active">Todos os Animais</button>
-      <button class="cat-btn">Aves</button>
-      <button class="cat-btn">Mamíferos</button>
-      <button class="cat-btn">Répteis</button>
-      <button class="cat-btn">Flora</button>
+      <button class="cat-btn active" data-filter="todos">Todos os Animais</button>
+      <button class="cat-btn" data-filter="ave">Aves</button>
+      <button class="cat-btn" data-filter="mamifero">Mamíferos</button>
+      <button class="cat-btn" data-filter="reptil">Répteis</button>
+      <button class="cat-btn" data-filter="anfibio">Anfibios</button>
+      <button class="cat-btn" data-filter="planta">Flora</button>
     </div>
   </div>
 
   <div class="cards-grid">
     <!-- Ave — Bem-te-vi -->
-    <div class="bio-card">
+    <div class="bio-card" data-category="ave">
       <div class="card-header ave">
         <span class="card-tag">Ave</span>
         <span class="card-icon">🐦</span>
@@ -193,7 +209,7 @@
       <div class="card-body">
         <h3>Bem-te-vi</h3>
         <p>Ave muito comum na região, presente em áreas abertas, matas e jardins de Teresópolis.</p>
-        <ul class="card-meta" style="list-style:none; padding:0;">
+        <ul class="card-meta">
           <li>📍 Áreas abertas, beiras de mata</li>
           <li>📅 Permanente — avistamento frequente</li>
           <li>⏰ Diurno</li>
@@ -203,7 +219,7 @@
     </div>
 
     <!-- Ave — Tucano-de-bico-verde -->
-    <div class="bio-card">
+    <div class="bio-card" data-category="ave">
       <div class="card-header ave">
         <span class="card-tag">Ave</span>
         <span class="card-icon">🦜</span>
@@ -211,7 +227,7 @@
       <div class="card-body">
         <h3>Tucano-de-bico-verde</h3>
         <p>Espécie emblemática da Mata Atlântica, dispersor de sementes essencial para a floresta.</p>
-        <ul class="card-meta" style="list-style:none; padding:0;">
+        <ul class="card-meta">
           <li>📍 Mata Atlântica de altitude</li>
           <li>📅 Permanente — avistamento: manhã/tarde</li>
           <li>⏰ Diurno</li>
@@ -221,7 +237,7 @@
     </div>
 
     <!-- Mamífero — Sagui-da-serra -->
-    <div class="bio-card">
+    <div class="bio-card" data-category="mamifero">
       <div class="card-header mamifero">
         <span class="card-tag">Mamífero</span>
         <span class="card-icon">🐒</span>
@@ -229,7 +245,7 @@
       <div class="card-body">
         <h3>Sagui-da-serra</h3>
         <p>Primata pequeno e ágil, vive em grupos nas copas das árvores da floresta.</p>
-        <ul class="card-meta" style="list-style:none; padding:0;">
+        <ul class="card-meta">
           <li>📍 Remanescentes de Mata Atlântica</li>
           <li>📅 Permanente — manhã e entardecer</li>
           <li>⏰ Diurno</li>
@@ -239,7 +255,7 @@
     </div>
 
     <!-- Anfíbio — Perereca -->
-    <div class="bio-card">
+    <div class="bio-card" data-category="anfibio">
       <div class="card-header anfibio">
         <span class="card-tag">Anfíbio</span>
         <span class="card-icon">🐸</span>
@@ -247,7 +263,7 @@
       <div class="card-body">
         <h3>Perereca-da-Serra</h3>
         <p>Espécie endêmica da Serra dos Órgãos, depende de ambientes úmidos e riachos.</p>
-        <ul class="card-meta" style="list-style:none; padding:0;">
+        <ul class="card-meta">
           <li>📍 Riachos e matas úmidas</li>
           <li>📅 Outubro–Março (estação chuvosa)</li>
           <li>⏰ Noturno</li>
@@ -257,7 +273,7 @@
     </div>
 
     <!-- Réptil -->
-    <div class="bio-card">
+    <div class="bio-card" data-category="reptil">
       <div class="card-header reptil">
         <span class="card-tag">Réptil</span>
         <span class="card-icon">🦎</span>
@@ -265,7 +281,7 @@
       <div class="card-body">
         <h3>Lagartixa-da-Serra</h3>
         <p>Peço pequeno e ágil, encontrado em troncos e pedras ensolaradas.</p>
-        <ul class="card-meta" style="list-style:none; padding:0;">
+        <ul class="card-meta">
           <li>📍 Áreas rochosas e bordas de mata</li>
           <li>📅 Permanente — dias ensolarados</li>
           <li>⏰ Diurno</li>
@@ -275,7 +291,7 @@
     </div>
 
     <!-- Flora -->
-    <div class="bio-card">
+    <div class="bio-card" data-category="planta">
       <div class="card-header planta">
         <span class="card-tag">Flora</span>
         <span class="card-icon">🌸</span>
@@ -283,7 +299,7 @@
       <div class="card-body">
         <h3>Orquídea da Serra</h3>
         <p>Espécies nativas que encantam pela beleza e importância ecológica nas matas de altitude.</p>
-        <ul class="card-meta" style="list-style:none; padding:0;">
+        <ul class="card-meta">
           <li>📍 Troncos e rochas — epífitas</li>
           <li>📅 Floração: primavera</li>
           <li>⏰ Permanente</li>
@@ -332,6 +348,33 @@
     <p id="loginMsg" class="erro"></p>
   </div>
 </div>
+
+<script>
+// FILTROS FUNCIONANDO
+const botoes = document.querySelectorAll('.cat-btn');
+const cards = document.querySelectorAll('.bio-card');
+
+botoes.forEach(botao => {
+  botao.addEventListener('click', () => {
+    // Marca botão ativo
+    botoes.forEach(b => b.classList.remove('active'));
+    botao.classList.add('active');
+
+    const filtro = botao.getAttribute('data-filter');
+
+    // Mostra/esconde cards
+    cards.forEach(card => {
+      const categoria = card.getAttribute('data-category');
+      if (filtro === 'todos' || categoria === filtro) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+</script>
+
 <script src="js/main.js"></script>
 </body>
 </html>
