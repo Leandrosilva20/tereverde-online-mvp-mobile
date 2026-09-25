@@ -33,12 +33,24 @@
       </div>
     </div>
     <div class="hero-image">
-      <img 
-        src="dedo-de-deus.jpg"
-        alt="Dedo de Deus — Serra dos Órgãos, Teresópolis"
-        style="width: 100%; height: auto; border-radius: 8px;">
+      <!-- Desenho do Dedo de Deus — não precisa de arquivo externo -->
+      <svg width="100%" height="280" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#e7e9de"/>
+            <stop offset="100%" stop-color="#f2f3ec"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="280" fill="url(#ceu)"/>
+        <circle cx="330" cy="55" r="30" fill="#a8582c" opacity="0.85"/>
+        <polygon points="0,200 80,120 150,160 220,90 300,150 400,110 400,280 0,280" fill="#8fae9b" opacity="0.4"/>
+        <!-- Dedo de Deus em destaque -->
+        <polygon points="195,70 205,70 218,150 200,200 182,150" fill="#4a7058"/>
+        <polygon points="0,220 100,150 170,190 250,140 330,180 400,140 400,280 0,280" fill="#3f6b4f" opacity="0.8"/>
+        <polygon points="0,245 120,180 200,220 280,185 400,230 400,280 0,280" fill="#1b3a2b"/>
+      </svg>
       <p style="text-align:center; font-size:0.85rem; color:#555; margin-top:0.5rem; font-style:italic;">
-        Dedo de Deus — Cartão postal de Teresópolis
+        Dedo de Deus — Serra dos Órgãos, Teresópolis
       </p>
     </div>
   </section>
