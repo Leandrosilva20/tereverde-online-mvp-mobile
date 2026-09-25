@@ -103,22 +103,10 @@ body {
 .filter-btn.active {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
 }
-.filter-btn.todas {
-  background-color: #28c76f;
-  color: white;
-}
-.filter-btn.facil {
-  background-color: #28c76f;
-  color: white;
-}
-.filter-btn.moderada {
-  background-color: #eab308;
-  color: white;
-}
-.filter-btn.dificil {
-  background-color: #ea4545;
-  color: white;
-}
+.filter-btn.todas { background-color: #28c76f; color: white; }
+.filter-btn.facil { background-color: #28c76f; color: white; }
+.filter-btn.moderada { background-color: #eab308; color: white; }
+.filter-btn.dificil { background-color: #ea4545; color: white; }
 
 .trilhas-grid {
   display: grid;
@@ -140,27 +128,25 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
+
 .trilha-imagem {
   width: 100%;
   height: 180px;
   object-fit: cover;
   display: block;
 }
+
 .trilha-nivel {
   padding: 0.6rem 1.25rem;
   color: white;
   font-weight: 600;
   font-size: 0.85rem;
+  margin: 0;
 }
-.trilha-nivel.facil {
-  background: #28c76f;
-}
-.trilha-nivel.moderada {
-  background: #eab308;
-}
-.trilha-nivel.dificil {
-  background: #ea4545;
-}
+.trilha-nivel.facil { background: #28c76f; }
+.trilha-nivel.moderada { background: #eab308; }
+.trilha-nivel.dificil { background: #ea4545; }
+
 .trilha-body {
   padding: 1.25rem;
 }
@@ -236,9 +222,9 @@ body {
 
   <div class="trilhas-grid">
 
-    <!-- FÁCIL -->
+    <!-- FÁCIL 1 -->
     <div class="trilha-card" data-nivel="facil">
-      <img src="images/trilha-bosque.jpg" alt="Trilha do Bosque" class="trilha-imagem" />
+      <img src="images/trilha.PNG" alt="Trilha do Bosque" class="trilha-imagem" />
       <div class="trilha-nivel facil">Fácil</div>
       <div class="trilha-body">
         <h3>Trilha do Bosque</h3>
@@ -252,8 +238,9 @@ body {
       </div>
     </div>
 
+    <!-- FÁCIL 2 -->
     <div class="trilha-card" data-nivel="facil">
-      <img src="images/cachoeira-horto.jpg" alt="Cachoeira do Horto" class="trilha-imagem" />
+      <img src="images/dois-bicos-cachoeira.png" alt="Cachoeira do Horto" class="trilha-imagem" />
       <div class="trilha-nivel facil">Fácil</div>
       <div class="trilha-body">
         <h3>Cachoeira do Horto</h3>
@@ -267,9 +254,9 @@ body {
       </div>
     </div>
 
-    <!-- MODERADA -->
+    <!-- MODERADA 1 -->
     <div class="trilha-card" data-nivel="moderada">
-      <img src="images/vale-frades.jpg" alt="Vale dos Frades" class="trilha-imagem" />
+      <img src="images/vale-dos-deus-frades.png" alt="Vale dos Frades" class="trilha-imagem" />
       <div class="trilha-nivel moderada">Moderada</div>
       <div class="trilha-body">
         <h3>Vale dos Frades</h3>
@@ -283,11 +270,12 @@ body {
       </div>
     </div>
 
+    <!-- MODERADA 2 -->
     <div class="trilha-card" data-nivel="moderada">
-      <img src="images/pedra-elefante.jpg" alt="Pedra do Elefante" class="trilha-imagem" />
+      <img src="images/pedra-do-sino.jpg" alt="Pedra do Elefante" class="trilha-imagem" />
       <div class="trilha-nivel moderada">Moderada</div>
       <div class="trilha-body">
-        <h3>Pedra do Elefante</h3>
+        <h3>Pedra do Sino</h3>
         <p>Sobe por matas de altitude até formação rochosa com vista panorâmica da região.</p>
         <ul class="trilha-meta">
           <li>📍 Parque Estadual dos Três Picos</li>
@@ -298,13 +286,13 @@ body {
       </div>
     </div>
 
-    <!-- DIFÍCIL -->
+    <!-- DIFÍCIL 1 -->
     <div class="trilha-card" data-nivel="dificil">
-      <img src="images/pico-serra-orgaos.jpg" alt="Pico da Serra dos Órgãos" class="trilha-imagem" />
+      <img src="images/agulha-do-diabo.png" alt="Agulha do Diabo" class="trilha-imagem" />
       <div class="trilha-nivel dificil">Difícil</div>
       <div class="trilha-body">
-        <h3>Pico da Serra dos Órgãos</h3>
-        <p>Trilha exigente com trechos de escalada básica, leva ao ponto mais alto do parque.</p>
+        <h3>Agulha do Diabo</h3>
+        <p>Trilha exigente com trechos de escalada básica, leva a um dos pontos mais altos do parque.</p>
         <ul class="trilha-meta">
           <li>📍 PARNASO — Acesso pela sede Teresópolis</li>
           <li>📏 12 km — ida e volta</li>
@@ -314,8 +302,9 @@ body {
       </div>
     </div>
 
+    <!-- DIFÍCIL 2 -->
     <div class="trilha-card" data-nivel="dificil">
-      <img src="images/travessia-teresopolis.jpg" alt="Travessia Teresópolis × Petrópolis" class="trilha-imagem" />
+      <img src="images/travessia-petropolis.png" alt="Travessia Teresópolis × Petrópolis" class="trilha-imagem" />
       <div class="trilha-nivel dificil">Difícil</div>
       <div class="trilha-body">
         <h3>Travessia Teresópolis × Petrópolis</h3>
