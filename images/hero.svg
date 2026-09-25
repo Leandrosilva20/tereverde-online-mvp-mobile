@@ -1,7 +1,34 @@
-<img 
-  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=500&fit=crop"
-  alt="Dedo de Deus — Serra dos Órgãos, Teresópolis"
-  style="width: 100%; height: auto; border-radius: 8px;">
-<p style="text-align:center; font-size:0.85rem; color:#555; margin-top:0.5rem; font-style:italic;">
-  Dedo de Deus — Cartão postal de Teresópolis
-</p>
+<div class="hero-image">
+  <svg width="100%" height="300" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+    <!-- Céu -->
+    <defs>
+      <linearGradient id="ceu" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e7e9de"/>
+        <stop offset="100%" stop-color="#f2f3ec"/>
+      </linearGradient>
+      <linearGradient id="montanha" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#2d5a3f"/>
+        <stop offset="100%" stop-color="#1b3a2b"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="250" fill="url(#ceu)"/>
+    
+    <!-- Sol -->
+    <circle cx="330" cy="50" r="28" fill="#a8582c" opacity="0.85"/>
+    
+    <!-- Montanhas de fundo -->
+    <polygon points="0,180 80,110 150,150 220,90 300,140 380,100 400,160 400,250 0,250" fill="#8fae9b" opacity="0.4"/>
+    
+    <!-- Dedo de Deus em destaque -->
+    <polygon points="195,60 205,60 215,140 200,180 185,140" fill="#5a7a65" opacity="0.9"/>
+    <polygon points="190,80 210,80 225,150 200,200 175,150" fill="#3f6b4f" opacity="0.85"/>
+    
+    <!-- Montanhas laterais -->
+    <polygon points="0,200 60,130 120,170 180,120 250,160 320,110 400,170 400,250 0,250" fill="#3f7a5d" opacity="0.7"/>
+    <polygon points="0,220 100,160 160,190 240,150 320,190 400,150 400,250 0,250" fill="#2a503e" opacity="0.85"/>
+    <polygon points="0,235 120,180 200,210 280,175 400,220 400,250 0,250" fill="#1b3a2b"/>
+  </svg>
+  <p style="text-align:center; font-size:0.85rem; color:#555; margin-top:0.5rem; font-style:italic;">
+    Dedo de Deus — Serra dos Órgãos, Teresópolis
+  </p>
+</div>
