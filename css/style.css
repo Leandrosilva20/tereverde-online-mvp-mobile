@@ -174,7 +174,26 @@ h1, h2, h3, h4 {
   gap: 14px;
   flex-wrap: wrap;
 }
+.list-item-foto {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid var(--linha);
+  flex-shrink: 0;
+}
+.list-item .info { flex: 1 1 200px; }
 .list-item .info h4 { margin: 0 0 4px; font-size: 1.05rem; }
+.list-item .info .descricao { font-size: 0.88rem; margin-top: 6px; color: #4b5850; }
+.list-item .info .saiba-mais {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--terracota);
+  text-decoration: none;
+  font-weight: 500;
+}
+.list-item .info .saiba-mais:hover { text-decoration: underline; }
 .list-item .info p { margin: 2px 0; color: #5a655d; font-size: 0.9rem; }
 .list-item .status { text-align: right; }
 .list-item .status .horario { display: block; font-size: 0.82rem; color: #5a655d; margin-top: 8px; }
