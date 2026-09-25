@@ -1,142 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biodiversidade & Trilhas — Circuito Terê Verde</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      line-height: 1.7;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-      color: #1f2937;
-      background-color: #f8faf8;
-    }
-    header {
-      margin-bottom: 2rem;
-      border-bottom: 2px solid #205c35;
-      padding-bottom: 1rem;
-    }
-    h1 { color: #205c35; font-size: 1.8rem; margin-bottom: 0.3rem; }
-    .subtitulo { color: #4b5563; }
-    h2 { color: #205c35; margin: 2rem 0 1rem; font-size: 1.4rem; }
-    .trilha {
-      background: #fff;
-      border-left: 4px solid #205c35;
-      border-radius: 0 12px 12px 0;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 3px 10px rgba(32,92,53,0.08);
-    }
-    .trilha-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      background-color: #d1e7dd;
-    }
-    .trilha h3 { color: #1a472a; margin-bottom: 0.5rem; }
-    .trilha p { margin-bottom: 0.7rem; color: #374151; }
-    a { color: #207542; font-weight: 600; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul { padding-left: 1.6rem; margin: 1rem 0; }
-    footer {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid #ddd;
-      color: #6b7280;
-      font-size: 0.9rem;
-    }
-    @media (min-width: 600px) {
-      .trilha-conteudo { display: flex; gap: 1.5rem; }
-      .trilha-img { width: 260px; min-width: 260px; height: 180px; margin-bottom: 0; }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Biodiversidade & Eventos — Circuito Terê Verde</title>
+<link rel="stylesheet" href="css/style.css" />
+<script defer src="js/main.js"></script>
+<style>
+  .page-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .page-intro h2 {
+    font-size: 1.5rem;
+    color: #1a2f23;
+    margin-bottom: 0.5rem;
+  }
+  .page-intro p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+  }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .bio-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+    background: white;
+  }
+  .bio-card:hover {
+    transform: translateY(-4px);
+  }
+  .card-photo {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 1.25rem;
+  }
+  .card-body h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: #1a4d30;
+  }
+  .card-body p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  .events-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1a2f23;
+  }
+  .event-card {
+    border: 1px solid #8fa899;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    background-color: #f0f2e9;
+  }
+  .event-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1a2f23;
+    font-size: 1rem;
+  }
+  .event-date {
+    font-weight: bold;
+    color: #9b5a2f;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .lotado {
+    color: #c0392b;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+</style>
 </head>
 <body>
-
-<header>
-  <h1>Circuito Terê Verde</h1>
-  <p class="subtitulo">Teresópolis — Ecoturismo, Biodiversidade & Aventura</p>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <h1>Circuito Terê Verde</h1>
+      <p class="subtitle">Teresópolis — Ecoturismo, Biodiversidade &amp; Aventura</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="trilhas.html" class="nav-link">Trilhas</a>
+      <a href="biodiversidade.html" class="nav-link ativo">Biodiversidade &amp; Eventos</a>
+      <button id="openLogin" class="btn login-btn">Login Admin</button>
+    </nav>
+  </div>
 </header>
+<main class="container">
 
-<h2>Trilhas e Travessias da Região</h2>
+  <div class="page-intro">
+    <h2>Biodiversidade da Região</h2>
+    <p>Conheça a riqueza natural de Teresópolis — fauna, flora e os eventos de educação ambiental que acontecem por aqui.</p>
+  </div>
 
-<div class="trilha">
-  <div class="trilha-conteudo">
-    <img src="https://seraventureiro.tur.br/img/travessia-petropolis-teresopolis.jpg" alt="Travessia Petrópolis × Teresópolis" class="trilha-img" onerror="this.src='https://placehold.co/600x400/205c35/ffffff?text=Petrópolis+x+Teresópolis'">
-    <div>
-      <h3>1 — Travessia Petrópolis × Teresópolis</h3>
-      <p>Considerada a travessia mais bonita do Brasil, feita em 3 dias com paisagens magníficas. Percorre o coração da Serra dos Órgãos, passando pelo Morro do Açu, Portais de Hércules e a Pedra do Sino (2.275 m).</p>
-      <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis" target="_blank">Ver detalhes →</a></p>
+  <div class="cards-grid">
+    <!-- Mata Atlântica -->
+    <div class="bio-card">
+      <img src="images/biodiversidade.PNG" alt="Mata Atlântica" class="card-photo">
+      <div class="card-body">
+        <h3>Mata Atlântica</h3>
+        <p>Um dos biomas mais ricos e ameaçados do país, com enorme diversidade de espécies endêmicas. A região abriga remanescentes de floresta ombrófila densa, com árvores de grande porte, bromélias e orquídeas.</p>
+      </div>
+    </div>
+
+    <!-- Avifauna -->
+    <div class="bio-card">
+      <img src="images/inicio.PNG" alt="Avifauna da região" class="card-photo">
+      <div class="card-body">
+        <h3>Avifauna</h3>
+        <p>Região privilegiada para observação de aves de altitude. Espécies como o Gavião-real, o Beija-flor-de-topete e a Cegonha-preta podem ser avistadas nos diferentes trechos da Serra dos Órgãos.</p>
+      </div>
+    </div>
+
+    <!-- Fauna de Altitude -->
+    <div class="bio-card">
+      <img src="images/trilha.PNG" alt="Fauna de altitude" class="card-photo">
+      <div class="card-body">
+        <h3>Fauna de Altitude</h3>
+        <p>Espécies adaptadas aos campos de altitude e formações rochosas do PARNASO e do Parque dos Três Picos. Veado-catingueiro, Quati e Jaguatirica compartilham o espaço com répteis e anfíbios de ocorrência restrita.</p>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="trilha">
-  <div class="trilha-conteudo">
-    <img src="https://seraventureiro.tur.br/img/vale-dos-deuses.jpg" alt="Travessia Vale dos Deuses × Vale dos Frades" class="trilha-img" onerror="this.src='https://placehold.co/600x400/207542/ffffff?text=Vale+dos+Deuses'">
-    <div>
-      <h3>2 — Travessia Vale dos Deuses × Vale dos Frades</h3>
-      <p>Uma das mais belas da região, cercada por montanhas imponentes. Realizada em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como Caixa de Fósforos e Cabeça de Dragão.</p>
-      <p><a href="https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades" target="_blank">Ver detalhes →</a></p>
+  <section class="events-section">
+    <h2>Próximos Eventos</h2>
+
+    <div class="event-card">
+      <h4>Mutirão de Limpeza de Trilhas</h4>
+      <div class="event-date">Parque Natural Municipal · 04/10/2026</div>
+      <p>Horário: 8h às 12h</p>
+      <p>Participe da conservação dos caminhos! Leve água, chapéu e disposição.</p>
     </div>
-  </div>
-</div>
 
-<div class="trilha">
-  <div class="trilha-conteudo">
-    <img src="https://seraventureiro.tur.br/img/pedra-do-sino.jpg" alt="Pedra do Sino" class="trilha-img" onerror="this.src='https://placehold.co/600x400/2d6a4f/ffffff?text=Pedra+do+Sino'">
-    <div>
-      <h3>3 — Pedra do Sino</h3>
-      <p>Ponto mais alto da Serra dos Órgãos. Trilha tradicional, sem grandes dificuldades técnicas apesar da distância. Recomendada em 2 dias para apreciar o nascer do sol no cume.</p>
-      <p><a href="https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno" target="_blank">Ver detalhes →</a></p>
+    <div class="event-card">
+      <h4>Caminhada Guiada de Observação de Aves</h4>
+      <div class="event-date">PARNASO · 18/10/2026</div>
+      <p>Horário: 6h30</p>
+      <p class="lotado">Vagas esgotadas</p>
     </div>
+  </section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div>© 2026 Circuito Terê Verde — Feito por Leandro Silva</div>
+    <div>Teresópolis — RJ</div>
   </div>
-</div>
-
-<div class="trilha">
-  <div class="trilha-conteudo">
-    <img src="https://seraventureiro.tur.br/img/dois-bicos.jpg" alt="Dois Bicos + Cachoeira dos Frades" class="trilha-img" onerror="this.src='https://placehold.co/600x400/409164/ffffff?text=Dois+Bicos'">
-    <div>
-      <h3>4 — Dois Bicos + Cachoeira dos Frades</h3>
-      <p>Trilha de 1 dia, nível moderado, no Vale dos Frades. Percorre áreas de fazenda até o cume com vista deslumbrante. No retorno, banho nas águas cristalinas da Cachoeira dos Frades.</p>
-      <p><a href="https://mymento.com.br/ser-aventureiro-trekking/dois-bicos" target="_blank">Ver detalhes →</a></p>
-    </div>
-  </div>
-</div>
-
-<div class="trilha">
-  <div class="trilha-conteudo">
-    <img src="https://seraventureiro.tur.br/img/mirante-do-inferno.jpg" alt="Mirante do Inferno / Agulha do Diabo" class="trilha-img" onerror="this.src='https://placehold.co/600x400/52b788/ffffff?text=Agulha+do+Diabo'">
-    <div>
-      <h3>5 — Mirante do Inferno / Agulha do Diabo</h3>
-      <p>Trilha de 1 dia, nível pesado, seguindo trecho da Pedra do Sino. O destino é um dos mais belos mirantes do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.</p>
-      <p><a href="https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno" target="_blank">Ver detalhes →</a></p>
-    </div>
-  </div>
-</div>
-
-<h2>Biodiversidade da Região</h2>
-<ul>
-  <li><strong>Mata Atlântica:</strong> Um dos biomas mais ricos e ameaçados do país, com enorme diversidade de espécies endêmicas.</li>
-  <li><strong>Avifauna:</strong> Região privilegiada para observação de aves de altitude.</li>
-  <li><strong>Fauna de altitude:</strong> Espécies adaptadas aos campos de altitude e formações rochosas do PARNASO e do Parque dos Três Picos.</li>
-</ul>
-
-<h2>Próximos Eventos</h2>
-<ul>
-  <li><strong>Mutirão de Limpeza de Trilhas</strong> — 04/10/2026 · 8h às 12h · Parque Natural Municipal</li>
-  <li><strong>Caminhada Guiada de Observação de Aves</strong> — 18/10/2026 · 6h30 · PARNASO (vagas esgotadas)</li>
-</ul>
-
-<footer>
-  © 2026 Circuito Terê Verde — Projeto acadêmico
 </footer>
-
+<div id="loginModal" class="modal" aria-hidden="true">
+  <div class="modal-panel">
+    <button id="closeLogin" class="modal-close" aria-label="Fechar">&times;</button>
+    <h3>Acesso Administrativo</h3>
+    <p class="muted">Área restrita para atualização de eventos e dados.</p>
+    <input id="email" type="email" placeholder="Email" autocomplete="username">
+    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password">
+    <div class="modal-actions">
+      <button id="loginBtn" class="btn primary">Entrar</button>
+      <button id="cancelLogin" class="btn ghost">Cancelar</button>
+    </div>
+    <p id="loginMsg" class="erro"></p>
+  </div>
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
