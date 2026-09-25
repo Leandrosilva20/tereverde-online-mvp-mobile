@@ -122,7 +122,7 @@ body {
 
 .trilhas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
@@ -139,22 +139,25 @@ body {
 .trilha-card:hover {
   transform: translateY(-4px);
 }
-.trilha-header {
-  padding: 1rem 1.25rem;
+.trilha-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.trilha-nivel {
+  padding: 0.5rem 1.25rem;
   color: white;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 0.85rem;
 }
-.trilha-header.facil {
-  background: linear-gradient(135deg, #28c76f, #20b05f);
+.trilha-nivel.facil {
+  background: #28c76f;
 }
-.trilha-header.moderada {
-  background: linear-gradient(135deg, #eab308, #ca9f07);
+.trilha-nivel.moderada {
+  background: #eab308;
 }
-.trilha-header.dificil {
-  background: linear-gradient(135deg, #ea4545, #d63030);
+.trilha-nivel.dificil {
+  background: #ea4545;
 }
 .trilha-body {
   padding: 1.25rem;
@@ -233,10 +236,8 @@ body {
 
     <!-- FÁCIL -->
     <div class="trilha-card" data-nivel="facil">
-      <div class="trilha-header facil">
-        <span>Fácil</span>
-        <span>🌿</span>
-      </div>
+      <img src="images/trilha-bosque.jpg" alt="Trilha do Bosque" class="trilha-imagem" />
+      <div class="trilha-nivel facil">Fácil</div>
       <div class="trilha-body">
         <h3>Trilha do Bosque</h3>
         <p>Percurso plano e sombreado, ideal para caminhadas leves e observação de aves.</p>
@@ -250,10 +251,8 @@ body {
     </div>
 
     <div class="trilha-card" data-nivel="facil">
-      <div class="trilha-header facil">
-        <span>Fácil</span>
-        <span>💧</span>
-      </div>
+      <img src="images/cachoeira-horto.jpg" alt="Cachoeira do Horto" class="trilha-imagem" />
+      <div class="trilha-nivel facil">Fácil</div>
       <div class="trilha-body">
         <h3>Cachoeira do Horto</h3>
         <p>Caminho curto que leva a uma cachoeira de águas claras, ótimo para banho e descanso.</p>
@@ -268,10 +267,8 @@ body {
 
     <!-- MODERADA -->
     <div class="trilha-card" data-nivel="moderada">
-      <div class="trilha-header moderada">
-        <span>Moderada</span>
-        <span>⛰️</span>
-      </div>
+      <img src="images/vale-frades.jpg" alt="Vale dos Frades" class="trilha-imagem" />
+      <div class="trilha-nivel moderada">Moderada</div>
       <div class="trilha-body">
         <h3>Vale dos Frades</h3>
         <p>Trilha que atravessa floresta fechada com riachos e mirantes com vista para a serra.</p>
@@ -285,10 +282,8 @@ body {
     </div>
 
     <div class="trilha-card" data-nivel="moderada">
-      <div class="trilha-header moderada">
-        <span>Moderada</span>
-        <span>🌲</span>
-      </div>
+      <img src="images/pedra-elefante.jpg" alt="Pedra do Elefante" class="trilha-imagem" />
+      <div class="trilha-nivel moderada">Moderada</div>
       <div class="trilha-body">
         <h3>Pedra do Elefante</h3>
         <p>Sobe por matas de altitude até formação rochosa com vista panorâmica da região.</p>
@@ -303,10 +298,8 @@ body {
 
     <!-- DIFÍCIL -->
     <div class="trilha-card" data-nivel="dificil">
-      <div class="trilha-header dificil">
-        <span>Difícil</span>
-        <span>🏔️</span>
-      </div>
+      <img src="images/pico-serra-orgaos.jpg" alt="Pico da Serra dos Órgãos" class="trilha-imagem" />
+      <div class="trilha-nivel dificil">Difícil</div>
       <div class="trilha-body">
         <h3>Pico da Serra dos Órgãos</h3>
         <p>Trilha exigente com trechos de escalada básica, leva ao ponto mais alto do parque.</p>
@@ -320,10 +313,8 @@ body {
     </div>
 
     <div class="trilha-card" data-nivel="dificil">
-      <div class="trilha-header dificil">
-        <span>Difícil</span>
-        <span>🧭</span>
-      </div>
+      <img src="images/travessia-teresopolis.jpg" alt="Travessia Teresópolis × Petrópolis" class="trilha-imagem" />
+      <div class="trilha-nivel dificil">Difícil</div>
       <div class="trilha-body">
         <h3>Travessia Teresópolis × Petrópolis</h3>
         <p>Percurso de um dia inteiro cruzando a serra, com paisagens deslumbrantes e desafios.</p>
