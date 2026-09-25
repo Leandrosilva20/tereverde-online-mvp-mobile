@@ -14,9 +14,61 @@ const STORAGE_KEYS = {
 };
 
 const SEED_TRILHAS = [
-  { id: "t1", nome: "Trilha do Açude", dificuldade: "Fácil", distancia: 2.5, disponibilidade: "disponivel", horario: "6h às 18h" },
-  { id: "t2", nome: "Pedra do Sino", dificuldade: "Difícil", distancia: 14, disponibilidade: "disponivel", horario: "5h às 12h (saída obrigatória até o meio-dia)" },
-  { id: "t3", nome: "Trilha dos Três Picos", dificuldade: "Difícil", distancia: 18, disponibilidade: "manutencao", horario: "Fechada temporariamente" },
+  {
+    id: "t1",
+    nome: "Travessia Petrópolis x Teresópolis",
+    dificuldade: "",
+    duracao: "3 dias",
+    descricao: "Considerada a travessia mais bonita do Brasil, com paisagens magníficas.",
+    link: "https://mymento.com.br/ser-aventureiro-trekking/travessia-petropolis-teresopolis",
+    disponibilidade: "disponivel",
+    horario: "",
+    foto: "",
+  },
+  {
+    id: "t2",
+    nome: "Travessia Vale dos Deuses x Vale dos Frades",
+    dificuldade: "",
+    duracao: "2 dias",
+    descricao: "Passa por dois vales cercados por altas montanhas; inclui acampamento no Vale dos Deuses e ataque a cumes como Caixa de Fósforos e Cabeça de Dragão.",
+    link: "https://mymento.com.br/ser-aventureiro-trekking/travessia-deuses-x-frades",
+    disponibilidade: "disponivel",
+    horario: "",
+    foto: "",
+  },
+  {
+    id: "t3",
+    nome: "Pedra do Sino",
+    dificuldade: "Moderada",
+    duracao: "2 dias (recomendado)",
+    descricao: "Ponto mais alto da Serra dos Órgãos. Trilha tradicional da cidade, sem grandes dificuldades técnicas apesar da distância — ótima para ver o sol nascer.",
+    link: "https://mymento.com.br/ser-aventureiro-trekking/pedra-do-sino_e_mirante_do_inferno",
+    disponibilidade: "disponivel",
+    horario: "",
+    foto: "",
+  },
+  {
+    id: "t4",
+    nome: "Dois Bicos",
+    dificuldade: "Moderada",
+    duracao: "1 dia",
+    descricao: "Trilha dentro de uma fazenda, com visual estonteante até o cume do Bico Maior. Na volta dá pra passar pela Cachoeira dos Frades.",
+    link: "https://mymento.com.br/ser-aventureiro-trekking/dois-bicos",
+    disponibilidade: "disponivel",
+    horario: "",
+    foto: "",
+  },
+  {
+    id: "t5",
+    nome: "Mirante da Agulha",
+    dificuldade: "Pesada",
+    duracao: "1 dia",
+    descricao: "Parte do trajeto da Pedra do Sino. Termina em um dos mirantes mais bonitos do PARNASO, de frente para a Agulha do Diabo.",
+    link: "https://mymento.com.br/ser-aventureiro-trekking/mirante-do-inferno",
+    disponibilidade: "disponivel",
+    horario: "",
+    foto: "",
+  },
 ];
 
 const SEED_EVENTOS = [
@@ -80,8 +132,6 @@ function configurarLoginModal() {
       const email = document.getElementById("email").value.trim();
       const senha = document.getElementById("senha").value;
 
-      // Simulação: em produção isso deve ser validado por um backend
-      // (ex.: API com hash de senha + tokens), nunca no navegador.
       if (email && senha.length >= 4) {
         sessionStorage.setItem(STORAGE_KEYS.sessao, "1");
         window.location.href = "admin.html";
@@ -123,12 +173,20 @@ function renderListaPublica(containerId, itens, tipo) {
     const div = document.createElement("div");
     div.className = "list-item";
     const linha2 = tipo === "trilha"
-      ? `${item.dificuldade} · ${item.distancia} km`
+      ? [item.dificuldade, item.duracao].filter(Boolean).join(" · ")
       : `${item.local} · ${item.data}`;
+    const fotoHtml = item.foto
+      ? `<img class="list-item-foto" src="${item.foto}" alt="Foto de ${item.nome || item.titulo}" />`
+      : "";
+    const descricaoHtml = item.descricao ? `<p class="descricao">${item.descricao}</p>` : "";
+    const linkHtml = item.link ? `<a class="saiba-mais" href="${item.link}" target="_blank" rel="noopener">Saiba mais →</a>` : "";
     div.innerHTML = `
+      ${fotoHtml}
       <div class="info">
         <h4>${item.nome || item.titulo}</h4>
         <p>${linha2}</p>
+        ${descricaoHtml}
+        ${linkHtml}
       </div>
       <div class="status">
         <span class="badge ${item.disponibilidade}">${rotuloDisponibilidade(item.disponibilidade)}</span>
@@ -151,8 +209,8 @@ function renderAdminTabela(tabelaId, itens, tipo) {
     if (tipo === "trilha") {
       tr.innerHTML = `
         <td>${item.nome}</td>
-        <td>${item.dificuldade}</td>
-        <td>${item.distancia} km</td>
+        <td>${item.dificuldade || "-"}</td>
+        <td>${item.duracao || "-"}</td>
         <td><span class="badge ${item.disponibilidade}">${rotuloDisponibilidade(item.disponibilidade)}</span></td>
         <td>${item.horario || "-"}</td>
         <td>
@@ -215,24 +273,33 @@ function configurarAdminTrilhas() {
         <label>Nome</label>
         <input id="f_nome" value="${item ? item.nome : ""}" />
         <label>Dificuldade</label>
-        <input id="f_dificuldade" value="${item ? item.dificuldade : ""}" />
-        <label>Distância (km)</label>
-        <input id="f_distancia" type="number" step="0.1" value="${item ? item.distancia : ""}" />
+        <input id="f_dificuldade" value="${item ? item.dificuldade || "" : ""}" placeholder="ex: Moderada" />
+        <label>Duração</label>
+        <input id="f_duracao" value="${item ? item.duracao || "" : ""}" placeholder="ex: 2 dias" />
+        <label>Descrição</label>
+        <input id="f_descricao" value="${item ? item.descricao || "" : ""}" />
+        <label>Link (saiba mais)</label>
+        <input id="f_link" value="${item ? item.link || "" : ""}" placeholder="https://..." />
         <label>Disponibilidade</label>
         <select id="f_disponibilidade">
           ${campoSelectDisponibilidade(item ? item.disponibilidade : "disponivel", ["disponivel", "manutencao", "fechado"])}
         </select>
         <label>Horário de funcionamento</label>
         <input id="f_horario" value="${item ? item.horario || "" : ""}" placeholder="ex: 6h às 18h" />
+        <label>Foto (nome do arquivo dentro de images/)</label>
+        <input id="f_foto" value="${item ? item.foto || "" : ""}" placeholder="ex: images/pedra-do-sino.jpg" />
       `,
       aoSalvar: () => {
         const novo = {
           id: item ? item.id : "t" + Date.now(),
           nome: document.getElementById("f_nome").value.trim(),
           dificuldade: document.getElementById("f_dificuldade").value.trim(),
-          distancia: parseFloat(document.getElementById("f_distancia").value) || 0,
+          duracao: document.getElementById("f_duracao").value.trim(),
+          descricao: document.getElementById("f_descricao").value.trim(),
+          link: document.getElementById("f_link").value.trim(),
           disponibilidade: document.getElementById("f_disponibilidade").value,
           horario: document.getElementById("f_horario").value.trim(),
+          foto: document.getElementById("f_foto").value.trim(),
         };
         if (!novo.nome) return;
         trilhas = item ? trilhas.map((t) => (t.id === item.id ? novo : t)) : [...trilhas, novo];
