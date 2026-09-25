@@ -7,53 +7,48 @@
 <link rel="stylesheet" href="css/style.css" />
 <script defer src="js/main.js"></script>
 <style>
-  .trail-card {
+  .trail-item {
     display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
     background: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    align-items: stretch;
-  }
-  .trail-banner {
-    flex: 0 0 220px;
     border-radius: 8px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .trail-label {
+    flex: 0 0 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-align: center;
     padding: 1rem;
   }
-  .trail-content {
+  .trail-info {
     flex: 1;
+    padding: 1.25rem 1.5rem;
   }
-  .trail-number {
+  .trail-title {
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #2d5a3f;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.75rem;
+    color: #222;
   }
-  .trail-desc {
+  .trail-text {
     color: #444;
     line-height: 1.6;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.75rem;
   }
-  .trail-link {
-    color: #2d5a3f;
-    font-weight: 600;
+  .trail-more {
+    color: #2d6b48;
+    font-weight: 500;
     text-decoration: none;
   }
-  .trail-link:hover {
-    text-decoration: underline;
-  }
-  @media (max-width: 650px) {
-    .trail-card { flex-direction: column; }
-    .trail-banner { min-height: 120px; }
+  @media (max-width: 600px) {
+    .trail-item { flex-direction: column; }
+    .trail-label { min-height: 100px; flex: none; }
   }
 </style>
 </head>
@@ -73,76 +68,70 @@
   </div>
 </header>
 <main class="container">
-  <h2>Trilhas e Percursos</h2>
-  <p class="intro">Conheça os principais caminhos da Serra dos Órgãos. Respeite as regras de visitação e aproveite com segurança!</p>
+  <h2>Trilhas</h2>
 
-  <!-- Trilha 1 -->
-  <div class="trail-card">
-    <div class="trail-banner" style="background-color: #1e5c3c;">
+  <div class="trail-item">
+    <div class="trail-label" style="background-color: #1a6640;">
       Petrópolis × Teresópolis
     </div>
-    <div class="trail-content">
-      <div class="trail-number">1 — Travessia Petrópolis × Teresópolis</div>
-      <p class="trail-desc">
+    <div class="trail-info">
+      <div class="trail-title">1 — Travessia Petrópolis × Teresópolis</div>
+      <p class="trail-text">
         Considerada a travessia mais bonita do Brasil, feita em 3 dias com paisagens magníficas. Percorre o coração da Serra dos Órgãos, passando pelo Morro do Açu, Portais de Hércules e a Pedra do Sino (2.275 m).
       </p>
-      <a href="#" class="trail-link">Ver detalhes →</a>
+      <a href="#" class="trail-more">Ver detalhes →</a>
     </div>
   </div>
 
-  <!-- Trilha 2 -->
-  <div class="trail-card">
-    <div class="trail-banner" style="background-color: #247048;">
+  <div class="trail-item">
+    <div class="trail-label" style="background-color: #207a4c;">
       Vale dos Deuses
     </div>
-    <div class="trail-content">
-      <div class="trail-number">2 — Travessia Vale dos Deuses × Vale dos Frades</div>
-      <p class="trail-desc">
+    <div class="trail-info">
+      <div class="trail-title">2 — Travessia Vale dos Deuses × Vale dos Frades</div>
+      <p class="trail-text">
         Uma das mais belas da região, cercada por montanhas imponentes. Realizada em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como Caixa de Fósforos e Cabeça de Dragão.
       </p>
-      <a href="#" class="trail-link">Ver detalhes →</a>
+      <a href="#" class="trail-more">Ver detalhes →</a>
     </div>
   </div>
 
-  <!-- Trilha 3 -->
-  <div class="trail-card">
-    <div class="trail-banner" style="background-color: #2a7a52;">
+  <div class="trail-item">
+    <div class="trail-label" style="background-color: #268a54;">
       Pedra do Sino
     </div>
-    <div class="trail-content">
-      <div class="trail-number">3 — Pedra do Sino</div>
-      <p class="trail-desc">
+    <div class="trail-info">
+      <div class="trail-title">3 — Pedra do Sino</div>
+      <p class="trail-text">
         Ponto mais alto da Serra dos Órgãos. Trilha tradicional, sem grandes dificuldades técnicas apesar da distância. Recomendada em 2 dias para apreciar o nascer do sol no cume.
       </p>
-      <a href="#" class="trail-link">Ver detalhes →</a>
+      <a href="#" class="trail-more">Ver detalhes →</a>
     </div>
   </div>
 
-  <!-- Trilha 4 -->
-  <div class="trail-card">
-    <div class="trail-banner" style="background-color: #349060;">
+  <div class="trail-item">
+    <div class="trail-label" style="background-color: #349960;">
       Dois Bicos
     </div>
-    <div class="trail-content">
-      <div class="trail-number">4 — Dois Bicos + Cachoeira dos Frades</div>
-      <p class="trail-desc">
+    <div class="trail-info">
+      <div class="trail-title">4 — Dois Bicos + Cachoeira dos Frades</div>
+      <p class="trail-text">
         Trilha de 1 dia, nível moderado, no Vale dos Frades. Percorre áreas de fazenda até o cume com vista deslumbrante. No retorno, banho nas águas cristalinas da Cachoeira dos Frades.
       </p>
-      <a href="#" class="trail-link">Ver detalhes →</a>
+      <a href="#" class="trail-more">Ver detalhes →</a>
     </div>
   </div>
 
-  <!-- Trilha 5 -->
-  <div class="trail-card">
-    <div class="trail-banner" style="background-color: #48b070;">
+  <div class="trail-item">
+    <div class="trail-label" style="background-color: #4ab878;">
       Agulha do Diabo
     </div>
-    <div class="trail-content">
-      <div class="trail-number">5 — Mirante do Inferno / Agulha do Diabo</div>
-      <p class="trail-desc">
+    <div class="trail-info">
+      <div class="trail-title">5 — Mirante do Inferno / Agulha do Diabo</div>
+      <p class="trail-text">
         Trilha de 1 dia, nível pesado, seguindo trecho da Pedra do Sino. O destino é um dos mais belos mirantes do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.
       </p>
-      <a href="#" class="trail-link">Ver detalhes →</a>
+      <a href="#" class="trail-more">Ver detalhes →</a>
     </div>
   </div>
 
