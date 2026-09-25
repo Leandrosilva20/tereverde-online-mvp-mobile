@@ -21,7 +21,9 @@ O Circuito Terê Verde é uma plataforma digital que reúne informações sobre 
 ## Estrutura do Projeto
 
 tereverde-online-mvp-mobile/
+
 ├── index.html # Página inicial
+
 ├── trilhas.html # Página de trilhas e percursos
 ├── biodiversidade.html # Flora, fauna e eventos
 ├── admin.html # Painel administrativo
