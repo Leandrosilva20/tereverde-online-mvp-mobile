@@ -3,9 +3,59 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trilhas - Circuito Terê Verde</title>
+<title>Trilhas — Circuito Terê Verde</title>
 <link rel="stylesheet" href="css/style.css" />
 <script defer src="js/main.js"></script>
+<style>
+  .trail-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    align-items: stretch;
+  }
+  .trail-banner {
+    flex: 0 0 220px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+  }
+  .trail-content {
+    flex: 1;
+  }
+  .trail-number {
+    font-weight: bold;
+    color: #2d5a3f;
+    margin-bottom: 0.3rem;
+  }
+  .trail-desc {
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+  .trail-link {
+    color: #2d5a3f;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .trail-link:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 650px) {
+    .trail-card { flex-direction: column; }
+    .trail-banner { min-height: 120px; }
+  }
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -22,25 +72,94 @@
     </nav>
   </div>
 </header>
-
 <main class="container">
-  <section class="section">
-    <h3>Trilhas disponíveis</h3>
-    <p class="muted">Disponibilidade e horários são atualizados pela administração do parque.</p>
-    <div id="listaTrilhas"></div>
-  </section>
+  <h2>Trilhas e Percursos</h2>
+  <p class="intro">Conheça os principais caminhos da Serra dos Órgãos. Respeite as regras de visitação e aproveite com segurança!</p>
+
+  <!-- Trilha 1 -->
+  <div class="trail-card">
+    <div class="trail-banner" style="background-color: #1e5c3c;">
+      Petrópolis × Teresópolis
+    </div>
+    <div class="trail-content">
+      <div class="trail-number">1 — Travessia Petrópolis × Teresópolis</div>
+      <p class="trail-desc">
+        Considerada a travessia mais bonita do Brasil, feita em 3 dias com paisagens magníficas. Percorre o coração da Serra dos Órgãos, passando pelo Morro do Açu, Portais de Hércules e a Pedra do Sino (2.275 m).
+      </p>
+      <a href="#" class="trail-link">Ver detalhes →</a>
+    </div>
+  </div>
+
+  <!-- Trilha 2 -->
+  <div class="trail-card">
+    <div class="trail-banner" style="background-color: #247048;">
+      Vale dos Deuses
+    </div>
+    <div class="trail-content">
+      <div class="trail-number">2 — Travessia Vale dos Deuses × Vale dos Frades</div>
+      <p class="trail-desc">
+        Uma das mais belas da região, cercada por montanhas imponentes. Realizada em 2 dias, com acampamento no Vale dos Deuses e conquista de cumes como Caixa de Fósforos e Cabeça de Dragão.
+      </p>
+      <a href="#" class="trail-link">Ver detalhes →</a>
+    </div>
+  </div>
+
+  <!-- Trilha 3 -->
+  <div class="trail-card">
+    <div class="trail-banner" style="background-color: #2a7a52;">
+      Pedra do Sino
+    </div>
+    <div class="trail-content">
+      <div class="trail-number">3 — Pedra do Sino</div>
+      <p class="trail-desc">
+        Ponto mais alto da Serra dos Órgãos. Trilha tradicional, sem grandes dificuldades técnicas apesar da distância. Recomendada em 2 dias para apreciar o nascer do sol no cume.
+      </p>
+      <a href="#" class="trail-link">Ver detalhes →</a>
+    </div>
+  </div>
+
+  <!-- Trilha 4 -->
+  <div class="trail-card">
+    <div class="trail-banner" style="background-color: #349060;">
+      Dois Bicos
+    </div>
+    <div class="trail-content">
+      <div class="trail-number">4 — Dois Bicos + Cachoeira dos Frades</div>
+      <p class="trail-desc">
+        Trilha de 1 dia, nível moderado, no Vale dos Frades. Percorre áreas de fazenda até o cume com vista deslumbrante. No retorno, banho nas águas cristalinas da Cachoeira dos Frades.
+      </p>
+      <a href="#" class="trail-link">Ver detalhes →</a>
+    </div>
+  </div>
+
+  <!-- Trilha 5 -->
+  <div class="trail-card">
+    <div class="trail-banner" style="background-color: #48b070;">
+      Agulha do Diabo
+    </div>
+    <div class="trail-content">
+      <div class="trail-number">5 — Mirante do Inferno / Agulha do Diabo</div>
+      <p class="trail-desc">
+        Trilha de 1 dia, nível pesado, seguindo trecho da Pedra do Sino. O destino é um dos mais belos mirantes do PARNASO, de frente para a Agulha do Diabo — considerada uma das montanhas mais bonitas do mundo.
+      </p>
+      <a href="#" class="trail-link">Ver detalhes →</a>
+    </div>
+  </div>
+
 </main>
-
 <footer class="site-footer">
-  <div class="container">© 2026 Circuito Terê Verde — Projeto acadêmico</div>
+  <div class="container">
+    <div>© 2026 Circuito Terê Verde — Feito por Leandro Silva</div>
+    <div>Teresópolis — RJ</div>
+  </div>
 </footer>
-
 <div id="loginModal" class="modal" aria-hidden="true">
   <div class="modal-panel">
     <button id="closeLogin" class="modal-close" aria-label="Fechar">&times;</button>
     <h3>Acesso Administrativo</h3>
-    <input id="email" type="email" placeholder="Email" autocomplete="username" />
-    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password" />
+    <p class="muted">Área restrita para edição de trilhas e eventos.</p>
+    <input id="email" type="email" placeholder="Email" autocomplete="username">
+    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password">
     <div class="modal-actions">
       <button id="loginBtn" class="btn primary">Entrar</button>
       <button id="cancelLogin" class="btn ghost">Cancelar</button>
@@ -48,5 +167,6 @@
     <p id="loginMsg" class="erro"></p>
   </div>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
