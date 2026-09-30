@@ -3,83 +3,194 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- PWA - Manifesto e cor do tema -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a4d30">
+<!-- Fim PWA -->
 <title>Circuito Terê Verde</title>
 <link rel="stylesheet" href="css/style.css" />
 <script defer src="js/main.js"></script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+body {
+  background-color: #f8faf6;
+  color: #1f2e25;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.site-header {
+  background-color: #1a4d30;
+  color: white;
+  padding: 1rem 0;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.brand h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+.brand p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+.nav a.ativo {
+  border-bottom: 2px solid #fff;
+  font-weight: bold;
+}
+.nav button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  margin-bottom: 2rem;
+}
+.hero h2 {
+  font-size: 1.8rem;
+  color: #1a4d30;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1rem;
+  color: #3a5f45;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+
+.destaques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.destaque-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+.destaque-card:hover {
+  transform: translateY(-4px);
+}
+.destaque-card h3 {
+  color: #1a4d30;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+.destaque-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #28c76f;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #21b05f;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  background: #e9ece4;
+}
+</style>
 </head>
 <body>
 <header class="site-header">
   <div class="container header-inner">
     <div class="brand">
       <h1>Circuito Terê Verde</h1>
-      <p class="subtitle">Teresópolis — Ecoturismo &amp; Biodiversidade</p>
+      <p>Teresópolis — Ecoturismo, Biodiversidade &amp; Aventura</p>
     </div>
     <nav class="nav">
-      <a href="index.html" class="nav-link ativo">Início</a>
-      <a href="trilhas.html" class="nav-link">Trilhas</a>
-      <a href="biodiversidade.html" class="nav-link">Biodiversidade &amp; Eventos</a>
-      <button id="openLogin" class="btn login-btn">Login Admin</button>
+      <a href="index.html" class="ativo">Início</a>
+      <a href="trilhas.html">Trilhas</a>
+      <a href="biodiversidade.html">Biodiversidade</a>
+      <button>Login Admin</button>
     </nav>
   </div>
 </header>
-<main class="container">
+
+<main>
   <section class="hero">
-    <div class="hero-left">
-      <h2>Explore as montanhas de Teresópolis</h2>
-      <p>Trilhas, cachoeiras e educação ambiental. Planeje sua visita com informações atualizadas sobre disponibilidade, horários e eventos nas unidades de conservação da região.</p>
-      <div class="actions">
-        <a href="trilhas.html" class="btn primary">Ver Trilhas</a>
-        <a href="biodiversidade.html" class="btn ghost">Eventos &amp; Biodiversidade</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img 
-        src="./images/dedo-de-deus.jpg"
-        alt="Dedo de Deus — Serra dos Órgãos, Teresópolis"
-        style="width: 100%; height: auto; border-radius: 8px;">
-      <p style="text-align:center; font-size:0.85rem; color:#555; margin-top:0.5rem; font-style:italic;">
-        Dedo de Deus — Cartão postal de Teresópolis
-      </p>
+    <div class="container">
+      <h2>Bem-vindo ao Circuito Terê Verde</h2>
+      <p>Descubra as trilhas, cachoeiras e a riqueza natural de Teresópolis, na Região Serrana do Rio de Janeiro. Natureza preservada, aventura e conhecimento ambiental.</p>
+      <img src="images/dedo-de-deus.jpg" alt="Dedo de Deus - Teresópolis" class="hero-img" />
     </div>
   </section>
-  <section class="section">
-    <h3>Parques em destaque</h3>
-    <div class="cards">
-      <article class="card">
-        <h4>Parque Nacional da Serra dos Órgãos</h4>
-        <p>Montanhas, cânions e trilhas clássicas, incluindo a Pedra do Sino.</p>
-      </article>
-      <article class="card">
-        <h4>Parque Estadual dos Três Picos</h4>
-        <p>Picos íngremes e biodiversidade rica, maior unidade de conservação do estado.</p>
-      </article>
-      <article class="card">
-        <h4>Parque Natural Municipal Montanhas de Teresópolis</h4>
-        <p>Trilhas curtas, mirantes locais e educação ambiental.</p>
-      </article>
+
+  <section class="container">
+    <div class="destaques">
+      <div class="destaque-card">
+        <h3>Trilhas e Percursos</h3>
+        <p>Rotas para todos os níveis, da caminhada leve à travessia desafiadora pela Serra dos Órgãos.</p>
+        <a href="trilhas.html" class="btn">Ver Trilhas</a>
+      </div>
+      <div class="destaque-card">
+        <h3>Biodiversidade</h3>
+        <p>Conheça as espécies de fauna e flora que tornam Teresópolis um santuário natural.</p>
+        <a href="biodiversidade.html" class="btn">Explorar</a>
+      </div>
+      <div class="destaque-card">
+        <h3>Conservação</h3>
+        <p>Ações e dicas para proteger e respeitar a natureza durante sua visita.</p>
+        <a href="#" class="btn">Saiba Mais</a>
+      </div>
     </div>
   </section>
 </main>
+
 <footer class="site-footer">
-  <div class="container">
-    <div>© 2026 Circuito Terê Verde — Projeto acadêmico</div>
-    <div>Teresópolis — RJ</div>
-  </div>
+  <div>© 2026 Circuito Terê Verde — Feito por Leandro Silva</div>
+  <div>Teresópolis — RJ</div>
 </footer>
-<div id="loginModal" class="modal" aria-hidden="true">
-  <div class="modal-panel">
-    <button id="closeLogin" class="modal-close" aria-label="Fechar">&times;</button>
-    <h3>Acesso Administrativo</h3>
-    <p class="muted">Área restrita para administradores do Circuito Terê Verde.</p>
-    <input id="email" type="email" placeholder="Email" autocomplete="username" />
-    <input id="senha" type="password" placeholder="Senha" autocomplete="current-password" />
-    <div class="modal-actions">
-      <button id="loginBtn" class="btn primary">Entrar</button>
-      <button id="cancelLogin" class="btn ghost">Cancelar</button>
-    </div>
-    <p id="loginMsg" class="erro"></p>
-    <p class="muted">⚠️ Demonstração acadêmica: este login roda só no navegador.</p>
-  </div>
-</div>
 </body>
 </html>
