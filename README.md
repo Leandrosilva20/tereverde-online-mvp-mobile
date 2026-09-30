@@ -14,24 +14,41 @@ O Circuito Terê Verde é uma plataforma digital que reúne informações sobre 
 ## Estrutura do Projeto
 
 tereverde-online-mvp-mobile/
+
 ├── index.html                  - Página Inicial
+
 ├── trilhas.html                - Página de Trilhas
+
 ├── biodiversidade.html         - Página de Biodiversidade e Eventos
+
 │
 ├── detalhes-bem-te-vi.html     - Página de detalhes: Bem-te-vi
+
 ├── detalhes-tucano.html        - Página de detalhes: Tucano-de-bico-verde
+
 ├── detalhes-sagui.html         - Página de detalhes: Sagui-da-serra
+
 ├── detalhes-perereca.html      - Página de detalhes: Perereca-da-Serra
+
 ├── detalhes-lagartixa.html     - Página de detalhes: Lagartixa-da-Serra
+
 ├── detalhes-orquidea.html      - Página de detalhes: Orquídea da Serra
+
 │
 ├── admin.html                  - Painel de Administração
+
 ├── painel.html                 - Painel de Controle
+
 ├── manifest.json              - Arquivo de configuração PWA
+
 │
+
 ├── css/                        - Arquivos de estilo
+
 ├── js/                         - Scripts e interatividade
+
 ├── images/                     - Imagens e mídia
+
 └── README.md                   - Este arquivo
 
 ---
