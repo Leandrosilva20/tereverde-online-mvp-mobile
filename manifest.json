@@ -1,0 +1,21 @@
+{
+  "name": "Circuito Terê Verde",
+  "short_name": "Terê Verde",
+  "description": "Ecoturismo e Biodiversidade em Teresópolis - RJ",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f8faf6",
+  "theme_color": "#1a4d30",
+  "icons": [
+    {
+      "src": "images/dedo-de-deus.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/dedo-de-deus.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
