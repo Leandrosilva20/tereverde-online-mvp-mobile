@@ -28,17 +28,29 @@ O MVP é um site responsivo desenvolvido em HTML, CSS e JavaScript, hospedado no
 
 tereverde-online-mvp-mobile/
 ├── index.html            # Página inicial
+
 ├── trilhas.html          # Página de trilhas e percursos
+
 ├── biodiversidade.html   # Flora, fauna e eventos
+
 ├── admin.html            # Painel administrativo
+
 ├── painel.html           # Painel de controle
+
 ├── css/                  # Estilos visuais
+
 ├── js/                   # Comportamentos e interatividade
+
 ├── images/               # Imagens e recursos visuais
+
 ├── data/                 # Arquivos de dados
+
 ├── test/                 # Testes e exemplos
+
 ├── requisitos.md         # Lista de requisitos funcionais e não-funcionais
+
 ├── escopo.md             # Definição de escopo
+
 └── README.md             # Este arquivo
 
 ```
