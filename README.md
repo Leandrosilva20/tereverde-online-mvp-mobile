@@ -1,127 +1,103 @@
+```
 # Circuito Terê Verde
-Teresópolis - Ecoturismo, Biodiversidade e Aventura
 
-Site informativo sobre a biodiversidade, trilhas e eventos ecológicos de Teresópolis - RJ.
+Ecoturismo & Biodiversidade em Teresópolis – RJ
 
----
-
-## Sobre o Projeto
-
-O Circuito Terê Verde é uma plataforma digital que reúne informações sobre as unidades de conservação, trilhas e atrativos naturais de Teresópolis, na Região Serrana do Rio de Janeiro. O objetivo é promover o turismo sustentável, a educação ambiental e a preservação da biodiversidade local.
+Site informativo e de visitação sobre as riquezas naturais de Teresópolis, apresentando trilhas, parques e ações de educação ambiental.
 
 ---
 
-## Estrutura do Projeto
+## 👥 Integrantes da Equipe
+- Leandro Silva — Desenvolvedor
+
+## 🎯 Situação-Problema
+Visitantes e moradores de Teresópolis encontram dificuldades para acessar informações centralizadas, confiáveis e atualizadas sobre trilhas, unidades de conservação, biodiversidade e boas práticas de visitação. As informações estão dispersas em diferentes canais, dificultando o planejamento seguro e o incentivo ao turismo sustentável na Região Serrana do Rio de Janeiro.
+
+## 📋 Descrição do MVP
+O Circuito Terê Verde é uma plataforma digital que reúne em um só lugar informações sobre:
+- Parques e unidades de conservação da região
+- Trilhas com nível de dificuldade e duração
+- Biodiversidade local (fauna, flora e eventos)
+- Orientações de visitação responsável
+
+O MVP é um site responsivo desenvolvido em HTML, CSS e JavaScript, hospedado no GitHub Pages, com foco em acessibilidade, clareza e facilidade de uso em dispositivos móveis.
+
+## 📂 Estrutura do Projeto
+
+```
 
 tereverde-online-mvp-mobile/
+├── index.html            # Página inicial
+├── trilhas.html          # Página de trilhas e percursos
+├── biodiversidade.html   # Flora, fauna e eventos
+├── admin.html            # Painel administrativo
+├── painel.html           # Painel de controle
+├── css/                  # Estilos visuais
+├── js/                   # Comportamentos e interatividade
+├── images/               # Imagens e recursos visuais
+├── data/                 # Arquivos de dados
+├── test/                 # Testes e exemplos
+├── requisitos.md         # Lista de requisitos funcionais e não-funcionais
+├── escopo.md             # Definição de escopo
+└── README.md             # Este arquivo
 
-├── index.html                  - Página Inicial
+```
 
-├── trilhas.html                - Página de Trilhas
+## 🚀 Como Executar Localmente
 
-├── biodiversidade.html         - Página de Biodiversidade e Eventos
+1. **Clone o repositório:**
+```bash
+git clone https://github.com/Leandrosilva20/tereverde-online-mvp-mobile.git
+```
 
-│
-├── detalhes-bem-te-vi.html     - Página de detalhes: Bem-te-vi
+2. **Acesse a pasta do projeto:**
 
-├── detalhes-tucano.html        - Página de detalhes: Tucano-de-bico-verde
+```
+cd tereverde-online-mvp-mobile
+```
 
-├── detalhes-sagui.html         - Página de detalhes: Sagui-da-serra
+3. **Abra o arquivo no navegador:**
 
-├── detalhes-perereca.html      - Página de detalhes: Perereca-da-Serra
+- Basta clicar duas vezes em `index.html` e ele abrirá no seu navegador padrão
+- Ou use uma extensão como "Live Server" no VS Code para visualizar melhor
 
-├── detalhes-lagartixa.html     - Página de detalhes: Lagartixa-da-Serra
+4. **Navegue pelo site:**
 
-├── detalhes-orquidea.html      - Página de detalhes: Orquídea da Serra
+- Use o menu para acessar as diferentes páginas do projeto
 
-│
-├── admin.html                  - Painel de Administração
+## 💻 Tecnologias Utilizadas
 
-├── painel.html                 - Painel de Controle
+- **HTML5** — Estrutura e conteúdo das páginas
+- **CSS3** — Estilos visuais e layout responsivo
+- **JavaScript** — Interatividade e elementos dinâmicos
+- **GitHub Pages** — Hospedagem e publicação online
 
-├── manifest.json              - Arquivo de configuração PWA
+## 🌐 Acesso Online
 
-│
+Você pode acessar o projeto publicado em:
+👉 [https://leandrosilva20.github.io/tereverde-online-mvp-mobile/](https://leandrosilva20.github.io/tereverde-online-mvp-mobile/)
 
-├── css/                        - Arquivos de estilo
+## 🌿 Práticas de Visitação Responsável
 
-├── js/                         - Scripts e interatividade
+- Respeite as sinalizações e percursos autorizados
+- Leve sua água e recipientes reutilizáveis
+- Não deixe lixo nos caminhos — leve sempre um saquinho
+- Preserve a fauna e flora — não toque nem alimente animais
+- Mantenha distância segura de bordas e penhascos
+- Respeite os horários de funcionamento das unidades de conservação
 
-├── images/                     - Imagens e mídia
+## 📊 Status do Projeto
 
-└── README.md                   - Este arquivo
+- ✅ MVP concluído e publicado
+- 🔄 Em desenvolvimento — novas funcionalidades em breve
 
----
+## 📄 Documentação Complementar
 
-## Funcionalidades
-
-### Biodiversidade
-- Filtros por categoria: Todos, Aves, Mamíferos, Anfíbios, Répteis, Flora
-- 6 espécies cadastradas:
-  - Bem-te-vi
-  - Tucano-de-bico-verde
-  - Sagui-da-serra
-  - Perereca-da-Serra
-  - Lagartixa-da-Serra
-  - Orquídea da Serra
-- Cada espécie tem página de detalhes com:
-  - Características da espécie
-  - Habitat e localização em Teresópolis
-  - Horário de avistamento
-  - Status de conservação
-  - Curiosidades
-- Seção de Eventos com próximas atividades
-
-### Trilhas
-- Informações sobre percursos
-- Classificação por nível de dificuldade: Fácil, Moderada e Difícil
-- Duração, distância e desnível de cada percurso
-
-### Administração
-- Páginas de controle para gestão de conteúdo
-
-### Dispositivos
-- Design responsivo: se adapta automaticamente a celulares, tablets e computadores
-- Implementado como PWA - Progressive Web App: pode ser instalado na tela inicial do celular e no computador, funcionando como aplicativo sem necessidade de loja de aplicativos
-
----
-
-## Como Usar
-
-1. Acesse pelo navegador: https://leandrosilva20.github.io/tereverde-online-mvp-mobile/
-2. Navegue pelo menu:
-   - Início - Apresentação do projeto
-   - Trilhas - Percursos disponíveis
-   - Biodiversidade - Fauna e flora local e Eventos
-3. Na página de Biodiversidade:
-   - Clique nos botões de filtro para filtrar por categoria
-   - Clique em Ver Detalhes para abrir a página completa da espécie
-   - Clique em Voltar para retornar à lista
-4. Para instalar como aplicativo:
-   - No celular: acesse o site pelo navegador e selecione Adicionar à tela inicial
-   - No computador: no navegador Chrome ou Edge, clique no ícone de instalar na barra de endereço
+- 📑 [requisitos.md](./requisitos.md) — Lista completa de Requisitos Funcionais e Não-Funcionais
+- 📑 [escopo.md](./escopo.md) — O que está dentro e fora do escopo deste MVP
 
 ---
 
-## Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript
-- PWA - Progressive Web App com manifest.json
-- Design responsivo
-
----
-
-## Sobre Teresópolis
-
-Localizada na Serra do Mar, abriga parte do Parque Nacional da Serra dos Órgãos (PARNASO) e do Parque Estadual dos Três Picos, com uma das maiores biodiversidades da Mata Atlântica.
-
----
-
-## Autor
-
-Feito por Leandro Silva
-Circuito Terê Verde
-Teresópolis - RJ
-© 2026 Todos os direitos reservados
+Feito com 💚 por Leandro Silva
+© 2026 Circuito Terê Verde — Todos os direitos reservados
+Teresópolis – Rio de Janeiro
